@@ -1,0 +1,21 @@
+body{
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  background-color: #FFFFFF;
+  font-family: 'Roboto';
+}
+.header{
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 10vh;
+  background: red;
+}
+.headerButton{
+  position: relative;
+  top: 20%;
+  font-size: 30px;
+  padding: 10px;
+}
