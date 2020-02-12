@@ -18,6 +18,8 @@
   <body>
 
     <?php
+      include 'inc/get.php';//include nav bar
+      include 'inc/login.php';//include nav bar
       include 'comp/navbar.php';//include nav bar
       include 'comp/login.php';//include inlog
      ?>

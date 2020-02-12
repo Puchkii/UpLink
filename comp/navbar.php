@@ -19,7 +19,7 @@
   <a href="index.php" class="logo">Upl!nk</a><!--Logo-->
 
   <a href="" class="headerButton">Problems</a><!--Header buttons-->
-  <a href="" class="headerButton">Tips</a>
+  <a href="" class="headerButton">CheatSheet</a>
   <a href="" class="headerButton">Friends</a>
   <a href="" class="headerButton">Profile</a>
 

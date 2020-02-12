@@ -66,7 +66,7 @@ a:hover{
   position: relative;
   left: 5%;
   top: 15%;
-  font-size: 35px;
+  font-size: 40px;
   color: white;
 }
 .logo:hover{
@@ -104,12 +104,12 @@ a:hover{
 .loginbuttonLoc{
   position: absolute;
   right: 5%;
-  top: 34%;
+  top: 39%;
 }
 .SearchBar{
   position: relative;
   top: 10%;
-  left:25%;
+  left:20%;
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
   border: none;
@@ -176,12 +176,11 @@ a:hover{
 .mainNews{
   position: relative;
   top: 100px;
-  left: 120px;
+  left: 50px;
   width: 400px;
   height: 400px;
   margin: 40px;
   display: inline-block;
-  /* background: red; */
 }
 .newsCato{
   position: relative;
@@ -203,6 +202,25 @@ a:hover{
   top: 40%;
   width: 75%;
   font-size: 20px;
+}
+
+/*Section*/
+  .section{
+    position: relative;
+    height: 80vh;
+    width: 100vw;
+    background: #F4F4F4;
+  }
+
+  .sectionInformatie{
+    
+  }
+
+/*footer*/
+.footer{
+  width: 100vw;
+  height: 35vh;
+  background: #242729;
 }
 
 /*Login*/

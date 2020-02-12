@@ -18,9 +18,12 @@
   <body>
 
     <?php
+      include 'inc/get.php';//include nav bar
       include 'comp/navbar.php';//include nav bar
       include 'comp/intro.php';//include intro
       include 'comp/main.php';//include main
+      include 'comp/section.php';//include section
+      include 'comp/footer.php';//include footer
      ?>
 
     <div class="container">

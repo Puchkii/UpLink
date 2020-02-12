@@ -1,4 +1,9 @@
 <?php
+    error_reporting(0);
+    session_start();
+    include 'db.php';
+
+
     $current = "Dylanspin";
 
     $sql = "SELECT id,username,password,created_at FROM `users` WHERE username = '$current';";
@@ -11,5 +16,16 @@
            $createdDB = $row['created_at'];
        }
    }
+   echo $_SESSION['current'];
+
+
+   function reloadPost(){
+        echo "<script>
+                  if ( window.history.replaceState ) {
+                    window.history.replaceState( null, null, window.location.href);
+                    location.reload(true);
+                  }
+              </script>";
+      }
 
  ?>
