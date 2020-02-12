@@ -11,23 +11,26 @@
   .loginbuttonLoc{
     top: 30%;
   }
+  .mobileMenu{/*laat de mobile menu weer zien op mobiel*/
+    display: flex;
+  }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  body {background: green;}
+  /* body {background: green;} */
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  body {background: blue;}
+  /* body {background: blue;} */
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  body {background: orange;}
+  /* body {background: orange;} */
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  body {background: pink;}
+  /* body {background: pink;} */
 }
