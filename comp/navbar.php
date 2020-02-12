@@ -14,22 +14,35 @@
   </div>
 
 <?php } ?>
-
-<form class="header">
-  <a href="index.php" class="logo">Upl!nk</a><!--Logo-->
-
-  <a href="" class="headerButton">Problems</a><!--Header buttons-->
-  <a href="" class="headerButton">CheatSheet</a>
-  <a href="" class="headerButton">Friends</a>
-  <a href="" class="headerButton">Profile</a>
-
-  <input type="text" name="search" placeholder="Search..." class="SearchBar" autocomplete="off"><!--Search bar-->
-
-  <div class="loginbuttonLoc"><!--Login/register buttons-->
-    <a href="login.php" class="inlogButton">Login</a>
-    <a href="register.php" class="inlogButton">Join Now</a>
+<!-- Bootstrap navbar. Er moet nog een  -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+  <a href="./index.html" class="navbar-brand"><img src="./img/logo.jpg" style=" width:25%;">UpL!nk</a> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a href="#" class="headerButton">Problems</a>
+      </li>
+      <li class="nav-item active">
+        <a href="#" class="headerButton">CheatSheet</a>
+      </li>
+      <li class="nav-item active">
+        <a href="#" class="headerButton">Friends</a>
+      </li>
+      <li class="nav-item active">
+        <a href="#" class="headerButton">Profile</a>
+      </li>
+      <input type="text" name="search" placeholder="Search..." class="SearchBar" autocomplete="off"><!--Search bar-->
+      <li class="nav-item active">
+        <a href="login.php" class="inlogButton">Login</a>
+      </li>
+      <li class="nav-item active">
+        <a href="register.php" class="inlogButton">Join Now</a>
+      </li>
+    </ul>
   </div>
-  <div class="mobileMenu"><!--Mobile menu-->
-    <i class="fa fa-bars" aria-hidden="true"></i>
-  </div>
-</form>
+</div>
+</nav>
