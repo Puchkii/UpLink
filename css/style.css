@@ -1,0 +1,182 @@
+body{
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  background-color: #FFFFFF;
+  font-family: 'Roboto';
+}
+a:hover{
+  text-decoration: none;
+}
+.underline:hover{
+  color: inherit;
+  text-decoration: underline;
+}
+.spacer{
+  height: 20px;
+  width: 100%;
+}
+/*Cookie melding*/
+.cookieMelding{
+  position: relative;
+  width: 100vw;
+  height: 10vh;
+  background-color: #1A85FE;
+}
+.cookieText{
+  position: relative;
+  top: 30%;
+  left: 5%;
+  font-size: 20px;
+  margin-right: 40px;
+  color: white;
+  display: inline-block;
+}
+.cookieAccept{
+  position: relative;
+  top: 30%;
+  left: 5%;
+  background: white;
+  font-size: 20px;
+  padding: 2px 20px 2px 20px;
+  border-radius:20px;
+  color: #161616;
+  border: none;
+  transition: 0.3s;
+}
+.cookieAccept:hover{
+  background: #5CA2D5;
+  color: white;
+}
+
+/*Header*/
+.header{
+  position: relative;
+  left: 0;
+  top: 0px;
+  width: 100vw;
+  height: 10vh;
+  background: linear-gradient(180deg, rgba(22,22,22,1) 0%, rgba(36,36,36,1) 100%);
+}
+.logo{
+  position: relative;
+  left: 5%;
+  top: 15%;
+  font-size: 35px;
+  color: white;
+}
+.logo:hover{
+  color: white;
+}
+.headerButton{
+  position: relative;
+  top: 15%;
+  left: 15%;
+  font-size: 20px;
+  color: white;
+  padding: 15px;
+}
+.headerButton:hover{
+  color:#276BB9;
+}
+.inlogButton{
+  position: relative;
+  right: 5%;
+  font-size: 20px;
+  padding: 5px 12px 5px 12px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 2px solid #276BB9;
+  background: none;
+  color: #276BB9;
+  transition: 0.2s;
+}
+.inlogButton:hover{
+  transform: scale(1.05,1.05);
+  color: white;
+  border: 2px solid white;
+}
+.loginbuttonLoc{
+  position: absolute;
+  right: 5%;
+  top: 34%;
+}
+.SearchBar{
+  position: relative;
+  top: 10%;
+  left:25%;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  border: none;
+  width: 300px;
+}
+.mobileMenu{
+  display: none;
+  position: absolute;
+  right: 3%;
+  top: 18%;
+  color: white;
+  font-size: 35px;
+}
+
+/*intro*/
+.intro{
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  background: #A1C2D1;
+  color: #161616;
+}
+
+/*main*/
+.main{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+}
+
+/*Login*/
+.login{
+  position: relative;
+  top: 5vh;
+  left: 35%;
+  width: auto;
+}
+.loginKop{
+  position: relative;
+  top: 100px;
+  color: black;
+  font-size: 40px;
+}
+.loginInputLoc{
+  position: relative;
+  top: 150px;
+}
+.inlog_input{
+  border: 1px solid black;
+  background: white;
+  font-size: 25px;
+  padding: 5px 10px 5px 10px;
+  width: 400px;
+  border-radius: 2px;
+  display: block;
+  margin-bottom: 5px;
+  margin-bottom: 20px;
+}
+.loginButton{
+  position: relative;
+  background-color: #171717;
+  padding: 5px 150px 5px 150px;
+  color: white;
+  border: none;
+  display: block;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  left: 30px;
+}
+.login_dont{
+  position: relative;
+  left: 120px;
+  color: #171717;
+}
