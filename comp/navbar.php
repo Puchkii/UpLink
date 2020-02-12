@@ -17,25 +17,28 @@
 <!-- Bootstrap navbar. Er moet nog een  -->
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
   <div class="container-fluid">
-  <a href="./index.html" class="navbar-brand"><img src="./img/logo.jpg" style=" width:25%;">UpL!nk</a> 
+  <a href="./index.php" class="navbar-brand"><img src="./img/logo.jpg" style=" width:25%;">UpL!nk</a> 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
   <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a href="#" class="headerButton">Problems</a>
+        <a href="#" class="">Problems</a>
       </li>
       <li class="nav-item active">
-        <a href="#" class="headerButton">CheatSheet</a>
+        <a href="#" class="">CheatSheet</a>
       </li>
       <li class="nav-item active">
-        <a href="#" class="headerButton">Friends</a>
+        <a href="#" class="">Friends</a>
       </li>
       <li class="nav-item active">
-        <a href="#" class="headerButton">Profile</a>
+        <a href="#" class="">Profile</a>
       </li>
+      <li>
       <input type="text" name="search" placeholder="Search..." class="SearchBar" autocomplete="off"><!--Search bar-->
+      </li>
       <li class="nav-item active">
         <a href="login.php" class="inlogButton">Login</a>
       </li>
@@ -43,6 +46,7 @@
         <a href="register.php" class="inlogButton">Join Now</a>
       </li>
     </ul>
+
   </div>
 </div>
 </nav>

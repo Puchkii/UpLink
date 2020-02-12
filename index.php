@@ -17,7 +17,7 @@
   <body>
 
     <?php
-      include 'inc/get.php';
+      // include 'inc/get.php';
       include 'comp/navbar.php';
       include 'comp/intro.php';
       include 'comp/main.php';
@@ -30,7 +30,7 @@
     </div>
 
     <!-- Selfmade JS -->
-    <script src="js/javascript.js"></script>
+    <script src="js/CookieNotifier.js"></script>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
