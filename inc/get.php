@@ -3,8 +3,7 @@
     session_start();
     include 'db.php';
 
-
-    $current = "Dylanspin";
+    $current = $_SESSION['current'];
 
     $sql = "SELECT id,username,password,created_at FROM `users` WHERE username = '$current';";
     $result = $conn->query($sql);
@@ -16,8 +15,6 @@
            $createdDB = $row['created_at'];
        }
    }
-   echo $_SESSION['current'];
-
 
    function reloadPost(){
         echo "<script>
@@ -26,6 +23,6 @@
                     location.reload(true);
                   }
               </script>";
-      }
+  }
 
  ?>

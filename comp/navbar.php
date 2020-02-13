@@ -15,8 +15,8 @@
 
 <?php } ?>
 <!-- Bootstrap navbar. Er moet nog een  -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a href="./index.php" class="navbar-brand"><img src="./img/logo.jpg" style=" width:25%;">UpL!nk</a> 
+<nav class="navbar navbar-expand-lg  header">
+  <a href="./index.php" class="navbar-brand"><img src="./img/logo.jpg" style=" width:25%;">UpL!nk</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
   <span class="navbar-toggler-icon"></span>
   </button>
@@ -36,16 +36,25 @@
         <a href="#" class="inlogButton nav-link">Profile</a>
       </li>
       <li>
-      <input type="text" name="search" placeholder="Search..." class="inlogButton nav-link" autocomplete="off">
+      <input type="text" name="search" placeholder="Search..." class="SearchBar nav-link" autocomplete="off">
       </li>
+      <?php
+        if(strlen($current) == 0)
+        {
+       ?>
       <li class="nav-item active">
         <a href="login.php" class="inlogButton nav-link">Log in</a>
       </li>
       <li class="nav-item active">
         <a href="register.php" class="inlogButton nav-link">Sign up</a>
       </li>
+      <?php }
+      else{ ?>
+        <form class="nav-item active" method="post">
+          <button class="inlogButton nav-link" name="logout">Sign out</button>
+        </form>
+      <?php } ?>
     </ul>
 
   </div>
-</div>
 </nav>

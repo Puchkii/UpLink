@@ -17,11 +17,12 @@
   <body>
 
     <?php
-      include 'inc/get.php';//include nav bar
-      include 'inc/login.php';//include nav bar
-      include 'comp/navbar.php';//include nav bar
-      include 'comp/login.php';//include inlog
-      ?>
+      include 'inc/get.php';
+      include 'inc/login.php';
+      include 'inc/logout.php';
+      include 'comp/navbar.php';
+      include 'comp/login.php';
+    ?>
 
     <div class="container">
 

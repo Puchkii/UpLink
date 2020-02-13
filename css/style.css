@@ -55,11 +55,11 @@ a:hover{
 
 /*Header*/
 .header{
-  position: relative;
+  /* position: relative;
   left: 0;
   top: 0px;
   width: 100vw;
-  height: 10vh;
+  height: 10vh; */
   background: linear-gradient(180deg, rgba(22,22,22,1) 0%, rgba(36,36,36,1) 100%);
 }
 .logo{
@@ -73,13 +73,14 @@ a:hover{
   color: white;
 }
 .headerButton{
-  position: relative;
+  /* position: relative;
   top: 15%;
   left: 15%;
   font-size: 20px;
   color: white;
   padding: 15px;
-  transition: 0.3s;
+  transition: 0.3s; */
+  color: white;
 }
 .headerButton:hover{
   color:#276BB9;
@@ -109,7 +110,6 @@ a:hover{
 .SearchBar{
   position: relative;
   top: 10%;
-  left:20%;
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
   border: none;
@@ -126,9 +126,6 @@ a:hover{
 
 /*intro*/
 .intro{
-  position: relative;
-  width: 100vw;
-  height: 90vh;
   background: #2B8EFE;
   color: #161616;
 }
@@ -213,7 +210,7 @@ a:hover{
   }
 
   .sectionInformatie{
-    
+
   }
 
 /*footer*/
