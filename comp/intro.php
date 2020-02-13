@@ -5,7 +5,7 @@
     iaculis nisl nunc quis ligula. Donec mollis quis lacus et mollis.
     Nulla ante odio, fermentum pellentesque condimentum convallis, hendrerit vitae elit.</h2>
     </div>
-    <div class="col-sm">
+    <div class="col-md-auto">
       <img src="img/stock1.jpg" alt="Stock image" class="image">
   </div>
 </div>
