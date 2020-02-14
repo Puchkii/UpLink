@@ -1,5 +1,3 @@
-
-
 <form class="login" method="post">
   <div class="loginKop">
     Login
