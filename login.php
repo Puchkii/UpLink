@@ -13,13 +13,8 @@
     <!-- Selfmade CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-<<<<<<< HEAD
-
-    <title>Login</title>
-=======
     
     <title>UpL!nk</title>
->>>>>>> kevin
   </head>
   <body>
 
