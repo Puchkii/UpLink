@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <title>UpL!nk</title>
+    <title>Register</title>
   </head>
   <body>
 

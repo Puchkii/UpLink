@@ -32,7 +32,7 @@
         <a href="#" class="btn btn-outline-primary nav-link">Friends</a>
       </li>
       <li class="nav-item active">
-        <a href="#" class="btn btn-outline-primary nav-link">Profile</a>
+        <a href="profile.php" class="btn btn-outline-primary nav-link">Profile</a>
       </li>
       <li class="nav-item active">
         <div class="input-group mb-3">
