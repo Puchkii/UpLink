@@ -6,7 +6,7 @@
   $dateForm = mysql_real_escape_string(strip_tags($_POST['birthDate']));
   $password1Form = mysql_real_escape_string(strip_tags($_POST['password']));
   $password2Form = mysql_real_escape_string(strip_tags($_POST['passwordRepeat']));
-  
+
   $checkArray= [$usernameForm,$emailForm,$dateForm,$password1Form,$password2Form];
 
   $fouten = [0,0,0,0,0,0,0,0,0,0];//fouten check voor later bij de fout meldingen
