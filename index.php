@@ -17,7 +17,9 @@
     <title>UpL!nk</title>
   </head>
   <body>
-
+    
+    <!-- ik keek ernaar en zei mezelf tienduizend keer niet kutten met de php dus vandaar deze comment
+    beter gebruik je een autoloader voor al deze files... groetjes de enige beste Puchkii aka Kevin -->
     <?php
       include 'inc/get.php';
       include 'inc/logout.php';

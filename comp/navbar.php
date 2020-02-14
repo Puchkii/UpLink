@@ -33,7 +33,7 @@
         <a href="#" class="btn nav-link">Friends</a>
       </li>
       <li class="nav-item active">
-        <a href="#" class="btn nav-link">Profile</a>
+        <a href="profile.php" class="btn nav-link">Profile</a>
       </li>
       <li class="nav-item active">
         <div class="input-group">
