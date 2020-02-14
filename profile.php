@@ -31,7 +31,7 @@
 
         <hr class="my-4">
           <div class="row">
-            <div class="col">
+            <div class="col-sm-8">
               <h2>Latest posts</h2>
               <!-- hier een back-end maken om posts in weer te geven -->
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam autem illo nesciunt sit deserunt laboriosam harum odio minima, possimus vero ipsam esse delectus ipsum fuga veritatis vel in optio voluptatum.</p>
@@ -39,7 +39,7 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam autem illo nesciunt sit deserunt laboriosam harum odio minima, possimus vero ipsam esse delectus ipsum fuga veritatis vel in optio voluptatum.</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam autem illo nesciunt sit deserunt laboriosam harum odio minima, possimus vero ipsam esse delectus ipsum fuga veritatis vel in optio voluptatum.</p>
             </div>
-            <div class="col">
+            <div class="col-sm-4">
               <h2>Followers</h2>
               <p>User</p>
               <p>User</p>
@@ -49,7 +49,7 @@
               <p>User</p>
             </div>
             <div class="w-100"></div>
-            <div class="col">
+            <div class="col-sm-8">
               <h2>About me</h2>
               <!-- Dit moet de gebruiker kunnen aanvullen in een aparte page met inputveld en knop -->
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, nobis! 
@@ -59,7 +59,7 @@
                   Iusto, beatae dolores fugiat magnam voluptatibus asperiores tempora fugit nobis. 
                   Qui saepe, quos ullam aperiam est assumenda aut voluptatem iste incidunt dolores.</p>
             </div>
-            <div class="col">
+            <div class="col-sm-4">
               <h2>Jobs</h2>
               <p>Jobtitle</p>
               <p>Jobtitle</p>
