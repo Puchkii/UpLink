@@ -1,5 +1,5 @@
-
 <?php
+    include 'block.php';
     if(isset($_POST['logout']))
     {
         $_SESSION['current'] = "";

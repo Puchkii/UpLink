@@ -2,7 +2,8 @@
     error_reporting(0);
     session_start();
     include 'db.php';
-
+    include 'block.php';
+    
     $current = $_SESSION['current'];
 
     $sql = "SELECT id,username,password,created_at FROM `users` WHERE username = '$current';";

@@ -1,5 +1,6 @@
 
 <?php
+   include 'block.php';
    $username = $_POST['username'];
    $password = $_POST['password'];
    $true = 0;
