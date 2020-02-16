@@ -38,8 +38,8 @@
       <li class="nav-item active">
         <div class="input-group">
           <form action="form-inline my-2 my-lg-0">
-            <input type="search" class="form-control mr-sm-2" placeholder="It aint gone search itself" aria-label="e" aria-describedby="">
             <div class="input-group-append">
+            <input type="search" class="form-control mr-sm-2" placeholder="Imagine searching" aria-label="e" aria-describedby="">
               <button class="btn btn-outline-secondary" type="button">Search</button>
             </form>
           </div>
