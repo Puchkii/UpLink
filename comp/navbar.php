@@ -24,13 +24,13 @@
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a href="#" class="btn nav-link">Problems</a>
+        <a href="index.php" class="btn nav-link">Home</a>
       </li>
       <li class="nav-item active">
-        <a href="#" class="btn nav-link">CheatSheet</a>
+        <a href="#" class="btn nav-link">Settings</a>
       </li>
       <li class="nav-item active">
-        <a href="#" class="btn nav-link">Friends</a>
+        <a href="#" class="btn nav-link">Trending</a>
       </li>
       <li class="nav-item active">
         <a href="profile.php" class="btn nav-link">Profile</a>
