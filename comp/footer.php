@@ -1,3 +1,6 @@
+<!-- Line for seperation of comp -->
+<hr>
+
 <!-- Footer -->
 <footer class="page-footer font-small blue pt-4">
 
@@ -11,7 +14,7 @@
       <div class="col-md-6 mt-md-0 mt-3">
 
         <!-- Content -->
-        <h5 class="text-uppercase">Footer Content</h5>
+        <h5 class="text-uppercase">About us</h5>
         <p>Here you can use rows and columns to organize your footer content.</p>
 
       </div>
