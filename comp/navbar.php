@@ -1,5 +1,6 @@
 
 <?php
+  include 'inc/search.php';//is nodig voor het zoeken naar accounts in de header
   if(!isset($_COOKIE['cookies']))//als cookie niet gezet is show cookie melding
   {
  ?>
@@ -37,12 +38,12 @@
       </li>
       <li class="nav-item active">
         <div class="input-group">
-          <form action="form-inline my-2 my-lg-0">
+          <form method="post"><!--Dit moet niet in de action action="form-inline my-2 my-lg-0"-->
             <div class="input-group-append">
-            <input type="search" class="form-control mr-sm-2" placeholder="Imagine searching" aria-label="e" aria-describedby="">
-              <button class="btn btn-outline-secondary" type="button">Search</button>
-            </form>
-          </div>
+              <input type="search" class="form-control mr-sm-2" placeholder="Imagine searching" aria-label="e" aria-describedby="" name="zoekWoord">
+              <button class="btn btn-outline-secondary" type="submit" name="zoeken">Search</button>
+            </div>
+          </form>
         </div>
       </li>
       <?php
