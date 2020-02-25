@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"> 
+<html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+
     <!-- Selfmade-->
     <link rel="stylesheet" href="css/style.css">
 
@@ -21,30 +21,36 @@
     <?php
       include 'inc/get.php';
       include 'inc/logout.php';
+      include 'inc/post.php';
       include 'comp/navbar.php';
       include 'comp/footer.php';
+      include 'comp/post.php';
       ?>
-      
+
       <div class="container">
-        <h1 class="center">User</h1>
-        <button type="submit" class="btn btn-outline-secondary">Follow</button>
+        <?php
+          if($current){// als je ingelogt bent
+              echo "<h1 class='center'>$current</h1>
+                    <button type='submit' class='btn btn-outline-secondary'>Follow</button>";
+          }
+         ?>
 
         <hr class="my-4">
           <div class="row">
             <div class="col-sm-8">
               <h2>Latest posts</h2>
               <!-- hier een back-end maken om posts in weer te geven -->
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Nam autem illo nesciunt sit deserunt laboriosam harum odio minima, 
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Nam autem illo nesciunt sit deserunt laboriosam harum odio minima,
               possimus vero ipsam esse delectus ipsum fuga veritatis vel in optio voluptatum.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Nam autem illo nesciunt sit deserunt laboriosam harum odio minima, 
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Nam autem illo nesciunt sit deserunt laboriosam harum odio minima,
               possimus vero ipsam esse delectus ipsum fuga veritatis vel in optio voluptatum.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Nam autem illo nesciunt sit deserunt laboriosam harum odio minima, 
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Nam autem illo nesciunt sit deserunt laboriosam harum odio minima,
               possimus vero ipsam esse delectus ipsum fuga veritatis vel in optio voluptatum.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Nam autem illo nesciunt sit deserunt laboriosam harum odio minima, 
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Nam autem illo nesciunt sit deserunt laboriosam harum odio minima,
               possimus vero ipsam esse delectus ipsum fuga veritatis vel in optio voluptatum.</p>
             </div>
             <div class="col-sm-4">
@@ -60,11 +66,11 @@
             <div class="col-sm-8">
               <h2>About me</h2>
               <!-- Dit moet de gebruiker kunnen aanvullen in een aparte page met inputveld en knop -->
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, nobis! 
-                Vero rem et repellat esse similique dolorum nihil eligendi animi dignissimos! 
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, nobis!
+                Vero rem et repellat esse similique dolorum nihil eligendi animi dignissimos!
                 Cupiditate quae necessitatibus mollitia voluptas assumenda. Est, unde sequi!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                  Iusto, beatae dolores fugiat magnam voluptatibus asperiores tempora fugit nobis. 
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Iusto, beatae dolores fugiat magnam voluptatibus asperiores tempora fugit nobis.
                   Qui saepe, quos ullam aperiam est assumenda aut voluptatem iste incidunt dolores.</p>
             </div>
             <div class="col-sm-4">
@@ -76,7 +82,7 @@
             </div>
           </div>
         </div>
-              
+
     <!-- Selfmade JS -->
     <script src="js/CookieNotifier.js"></script>
 
