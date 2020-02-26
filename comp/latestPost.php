@@ -1,5 +1,4 @@
 <?php
-
     $t = 0;
 
     $sql = "SELECT id,title,Text,Img,DatePost FROM `post` WHERE Username = '$bezoek';";
@@ -14,10 +13,33 @@
            $t ++;
        }
     }
-    for($i=$t-1; $i>=0; $i--){/*Kevin hier worden de post geprint dus hier moet je de style aanpassen */ //die br tags zijn nu voor testen
-        echo $titlePost[$i]."<br>".$textPost[$i]."<br>".$DatePost[$i]."<br>";
+    
+    for($i=$t-1; $i>=0; $i--){
+        $sql = "SELECT likers FROM `post` WHERE id = '$idPost[$i]';";//voor de like check/aantal likes
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+           while($row = $result->fetch_assoc()) {
+               $likeArray = unserialize($row['likers']);
+           }
+        }
+        if(empty($likeArray)){
+            $aantal = 0;
+        }else{
+            $aantal = count($likeArray);
+        }
+
+        /*Kevin hier worden de post geprint dus hier moet je de style aanpassen */ //die br tags zijn nu voor testen
+
+        echo $titlePost[$i]."<br>".$textPost[$i]."<br>".$DatePost[$i]."<br> Likes : ".$aantal."<br>";//title/text/date/aantal likes
         if($imagePost[$i] != $bezoek){//checkt als er een image in de post zit
-            echo "<img src='img/userImages/$imagePost[$i]' alt='post image'><br>";
+            echo "<img src='img/userImages/$imagePost[$i]' alt='post image'><br>";//image
+        }
+        if(!in_array($current,$likeArray)){//like button
+          echo "<form method='post' class=''>
+                  <button type='submit' name='like' value='$idPost[$i]'>LIKE</button>
+                </form>";
+        }else{
+          //een remove like button
         }
         echo "<br>";
     }
