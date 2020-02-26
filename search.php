@@ -20,11 +20,15 @@
     <?php
       include 'inc/get.php';
       include 'inc/logout.php';
+      include 'inc/bezoek.php';
       include 'comp/navbar.php';
       include 'comp/footer.php';
-      include 'comp/showSearch.php';
+
       ?>
 
+      <form class="" method="post">
+        <?php include 'comp/showSearch.php'; ?>
+      </form>
     <!-- Selfmade JS -->
     <script src="js/CookieNotifier.js"></script>
 

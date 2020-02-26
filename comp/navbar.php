@@ -1,6 +1,7 @@
 
 <?php
   include 'inc/search.php';//is nodig voor het zoeken naar accounts in de header
+  include 'inc/bezoek.php';//is nodig voor het bezoeken van je eigen profile
   if(!isset($_COOKIE['cookies']))//als cookie niet gezet is show cookie melding
   {
  ?>
@@ -14,7 +15,6 @@
       </div>
     </div>
   </div>
-
 <?php } ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a href="./index.php" class="navbar-brand"><img src="./img/logo.jpg" style=" width:25%;"></a>
@@ -34,7 +34,9 @@
         <a href="#" class="btn nav-link">Trending</a>
       </li>
       <li class="nav-item active">
-        <a href="profile.php" class="btn nav-link">Profile</a>
+        <form class="" method="post"><!--Deze style moet nog gedaan worden ------------------------------------------------>
+            <button name='bezoek' class="btn nav-link" type='submit' value='<?php echo $current; ?>'>Profile</button>
+        </form>
       </li>
       <li class="nav-item active">
         <div class="input-group">

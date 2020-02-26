@@ -25,4 +25,8 @@
         reloadPost();
     }
 
+    if(isset($_POST['Like'])){
+        
+    }
+
  ?>

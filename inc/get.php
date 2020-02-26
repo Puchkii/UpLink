@@ -1,10 +1,11 @@
 <?php
-    error_reporting(0);
+    // error_reporting(0);
     session_start();
     include 'db.php';
     include 'block.php';
-    
+
     $current = $_SESSION['current'];
+    $bezoek = $_SESSION['bezoekPagina'];
 
     $sql = "SELECT id,username,password,created_at FROM `users` WHERE username = '$current';";
     $result = $conn->query($sql);

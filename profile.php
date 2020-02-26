@@ -30,7 +30,7 @@
       <div class="container">
         <?php
           if($current){// als je ingelogt bent
-              echo "<h1 class='center'>$current</h1>
+              echo "<h1 class='center'>$bezoek</h1>
                     <button type='submit' class='btn btn-outline-secondary'>Follow</button>";
           }
          ?>
