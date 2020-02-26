@@ -1,15 +1,15 @@
-<form class="login" method="post">
-  <div class="loginKop">
-    Login
-  </div>
-  <div class="loginInputLoc">
-    <h4>Username</h4>
-    <input type="text" name="username" class="inlog_input" placeholder="Username" autocomplete="off">
-
-    <h4>Password</h4>
-    <input type="password" name="password" class="inlog_input" placeholder="Password">
-
-    <input type="submit" name="login" value="Login" class="loginButton">
-    <a href="#" class="login_dont underline">Dont have a Account ?</a>
-  </div>
-</form>
+<div class="container text-center">
+  <form>
+    <div class="form-group">
+      <label for="formGroupExampleInput"><h4>Username</h4></label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter username">
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2"><h4>Password</h4></label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter password">
+    </div>
+    <br><br>
+      <button type="submit" name="login" value="Login" class="btn btn-outline-secondary">Login</button>
+      <button href="#" class="btn btn-outline-secondary">Dont have an Account?</button>
+  </form>
+</div>
