@@ -25,8 +25,32 @@
         reloadPost();
     }
 
-    if(isset($_POST['Like'])){
-        
+    $Like = $_POST['like'];
+    
+    if(isset($Like)){
+        $sql = "SELECT Username,likers FROM `post` WHERE id = '$Like';";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+           while($row = $result->fetch_assoc()) {
+               $usernamePost = $row['Username'];
+               $likeArray = unserialize($row['likers']);
+           }
+        }
+        if($usernamePost != $current){//zo dat je niet je eigen post een like kan geven
+            if(empty($likeArray)){
+                $likeArray = [$current];
+            }
+            else{
+                if(!in_array($current,$likeArray)){
+                    array_push($likeArray,$current);
+                }
+            }
+            $compresLikes = serialize($likeArray);
+            $sql = "UPDATE `post` SET `likers` = '$compresLikes' WHERE Id = '$Like';";
+            if ($conn->query($sql) === true){
+            }
+        }
+        reloadPost();
     }
 
  ?>
