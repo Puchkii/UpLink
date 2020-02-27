@@ -1,26 +1,24 @@
 
 <div class="container">
-  <p>Latest news from Upl!nk</p>
+  <p>Upl!nk - Feed</p>
+  
   <div class="row">
-    <div class="col">
+    <div class="col-sm">
       <i class="fa fa-handshake-o" aria-hidden="true"></i>
       <h2>New Partnership</h2>
-      <p>ac eget nibh. Fusce non hendrerit arcu. Curabitur justo nibh, sagittis eget
-        pharetra vel, suscipit vel nisl. Pellentesque quis gravida nunc.</p>
+      <p>hier moet iemands post verschijnen</p>
     </div>
 
-    <div class="col">
+    <div class="col-sm">
       <i class="fa fa-wrench" aria-hidden="true"></i>
       <h2>Some new bugfixes</h2>
-      <p>ac eget nibh. Fusce non hendrerit arcu. Curabitur justo nibh, sagittis eget
-        pharetra vel, suscipit vel nisl. Pellentesque quis gravida nunc.</p>
+      <p>en hier ook.</p>
     </div>
 
-    <div class="col">
+    <div class="col-sm">
       <i class="fa fa-plus" aria-hidden="true"></i>
       <h2>Added new features</h2>
-      <p>ac eget nibh. Fusce non hendrerit arcu. Curabitur justo nibh, sagittis eget
-        pharetra vel, suscipit vel nisl. Pellentesque quis gravida nunc.</p>
+      <p>en hier ook wel eigenlijk.</p>
     </div>
   </div>
 </div>

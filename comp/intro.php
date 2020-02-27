@@ -1,4 +1,4 @@
-<div class="container-fluid padding">
+<div class="container padding">
   <div class="row padding">
     <div class="col-lg-6">
       <h1>Stock text random text over Upl!nk nog wat random text</h1><h2>

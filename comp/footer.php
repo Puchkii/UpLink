@@ -15,7 +15,7 @@
 
         <!-- Content -->
         <h5 class="text-uppercase">About us</h5>
-        <p>Here you can use rows and columns to organize your footer content.</p>
+        <p>Bij ons staat privacy op nummer 1</p>
 
       </div>
       <!-- Grid column -->
@@ -78,7 +78,7 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="#">Copyright blablabla Alinity vibes</a>
+    <a href="https://i.pinimg.com/originals/be/f9/3d/bef93d938ddb7f64b711a301447be1a3.jpg">Copyright By Kevin & Dylan Corporation</a>
   </div>
   <!-- Copyright -->
 

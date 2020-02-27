@@ -16,56 +16,64 @@
     </div>
   </div>
 <?php } ?>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a href="./index.php" class="navbar-brand"><img src="./img/logo.jpg" style=" width:25%;"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-  <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a href="index.php" class="btn nav-link">Home</a>
-      </li>
-      <li class="nav-item active">
-        <a href="#" class="btn nav-link">Settings</a>
-      </li>
-      <li class="nav-item active">
-        <a href="#" class="btn nav-link">Trending</a>
-      </li>
-      <li class="nav-item active">
-        <form class="" method="post"><!--Deze style moet nog gedaan worden ------------------------------------------------>
-            <button name='bezoek' class="btn nav-link" type='submit' value='<?php echo $current; ?>'>Profile</button>
-        </form>
-      </li>
-      <li class="nav-item active">
-        <div class="input-group">
-          <form method="post"><!--Dit moet niet in de action action="form-inline my-2 my-lg-0"-->
-            <div class="input-group-append">
-              <input type="search" class="form-control mr-sm-2" placeholder="Imagine searching" aria-label="e" aria-describedby="" name="zoekWoord">
-              <button class="btn btn-outline-secondary" type="submit" name="zoeken">Search</button>
-            </div>
-          </form>
-        </div>
-      </li>
+
+<!-- vanaf deze lijn naar beneden moet de php weer worden toegepast. ik heb je php code onderaan gelaten
+      zodat je het alleen hoeft te plakken op de juiste plaats -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Feed</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Trending</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Followers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Settings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Profile</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mx-auto order-0">
+        <a class="navbar-brand mx-auto" href="#">UpL!nk</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li>
+              <input type="text" placeholder="Gotta catch em all" class="rounded">
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Log In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sign Up</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+
+
       <?php
         if(strlen($current) == 0)
         {
-       ?>
-      <li class="nav-item active">
-        <a href="login.php" class="btn nav-link ">Log in</a>
-      </li>
-      <li class="nav-item active">
-        <a href="register.php" class="btn nav-link ">Sign up</a>
-      </li>
+          ?>
+
+
       <?php }
       else{ ?>
-      <div class="">
-        <form class="nav-item active" method="post">
-          <button class="btn nav-link" name="logout">Sign out</button>
-        </form>
-      </div>
+
+
       <?php } ?>
-    </ul>
-  </div>
-</nav>
