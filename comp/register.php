@@ -15,7 +15,7 @@
     <div class="form-group">
       <label for="formGroupExampleInput2"><h4>Password</h4></label>
       <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Enter password">
-      <input type="password" name="form-control passwordRepeat" placeholder="Repeat password">
+      <input type="password" class="form-control" name="passwordRepeat" placeholder="Repeat password">
     </div>
       <input type="submit" name="submitReg" value="Submit">
       <button type="submit" name="register" value="Submit" class="btn btn-outline-secondary">Register now</button>

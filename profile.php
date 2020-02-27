@@ -22,19 +22,25 @@
       include 'inc/get.php';
       include 'inc/logout.php';
       include 'inc/post.php';
+      include 'inc/follow.php';
       include 'comp/navbar.php';
       include 'comp/footer.php';
       include 'comp/post.php';
       ?>
 
       <div class="container">
-        <?php
-          if($current){// als je ingelogt bent
-              echo "<h1 class='center'>$bezoek</h1>
-                    <button type='submit' class='btn btn-outline-secondary'>Follow</button>";
-          }
-         ?>
-
+        <form class="" method="post">
+            <?php
+              if($current){// als je ingelogt bent
+                  echo "<h1 class='center'>$bezoek</h1>";
+                  if($following){
+                      echo "<button type='submit' name='unfollow' class='btn btn-outline-secondary'>Unfollow</button>";
+                  }else{
+                      echo "<button type='submit' name='follow' class='btn btn-outline-secondary'>Follow</button>";
+                  }
+              }
+             ?>
+         </form>
         <hr class="my-4">
           <div class="row">
             <div class="col-sm-8">
