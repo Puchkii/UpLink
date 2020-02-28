@@ -1,7 +1,7 @@
 
 <?php
     if(isset($_POST['zoeken'])){
-        $_SESSION['zoekWoord'] = $_POST['zoekWoord'];
+        $_SESSION['zoekWoord'] = $_POST['zoeken'];
         if(basename($_SERVER['PHP_SELF']) == "search.php"){
             reloadPost();
         }

@@ -26,6 +26,12 @@
        }
    }
 
+   $nu = time();
+   $date = strtotime($createdDB);
+   $datediff = $nu - $date;
+
+   $dagen = round($datediff / (60 * 60 * 24));
+
    function reloadPost(){
         echo "<script>
                   if ( window.history.replaceState ) {

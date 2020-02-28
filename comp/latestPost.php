@@ -13,7 +13,7 @@
            $t ++;
        }
     }
-    
+
     for($i=$t-1; $i>=0; $i--){
         $sql = "SELECT likers FROM `post` WHERE id = '$idPost[$i]';";//voor de like check/aantal likes
         $result = $conn->query($sql);
@@ -34,12 +34,14 @@
         if($imagePost[$i] != $bezoek){//checkt als er een image in de post zit
             echo "<img src='img/userImages/$imagePost[$i]' alt='post image'><br>";//image
         }
-        if(!in_array($current,$likeArray)){//like button
-          echo "<form method='post' class=''>
-                  <button type='submit' name='like' value='$idPost[$i]'>LIKE</button>
-                </form>";
-        }else{
-          //een remove like button
+        if($bezoek != $current){
+            if(!in_array($current,$likeArray)){//like button
+                echo "<form method='post' class=''>
+                        <button type='submit' name='like' value='$idPost[$i]'>LIKE</button>
+                      </form>";
+            }else{
+              //een remove like button
+            }
         }
         echo "<br>";
     }

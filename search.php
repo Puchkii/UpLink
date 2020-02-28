@@ -23,7 +23,6 @@
       include 'inc/bezoek.php';
       include 'comp/navbar.php';
       include 'comp/footer.php';
-
       ?>
 
       <form class="" method="post">
