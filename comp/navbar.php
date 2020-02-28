@@ -33,15 +33,17 @@
                 <a class="nav-link" href="#">Followers</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Settings</a>
+                <a class="nav-link" href="settings.php">Settings</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Profile</a>
+              <form class="" method="post"><!--kevin dit moet een form zijn om naar het goede account te gaan-->
+                  <button class="nav-link" type="submit" value="<?php echo $current; ?>" name="bezoek">Profile</button>
+              </form>
             </li>
         </ul>
     </div>
     <div class="mx-auto order-0">
-        <a class="navbar-brand mx-auto" href="#">UpL!nk</a>
+        <a class="navbar-brand mx-auto" href="index.php">UpL!nk</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -49,31 +51,24 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
             <li>
-              <input type="text" placeholder="Gotta catch em all" class="rounded">
+              <form class=""  method="post">
+                  <input type="text" placeholder="Gotta catch em all" name="zoeken" class="rounded">
+              </form>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Log In</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Sign Up</a>
-            </li>
+            <?php if($current){
+              echo "<li class='nav-item'>
+                      <form method='post'>
+                        <button type='submit' name='logout' class='nav-link'>Logout</button>
+                      </form>
+                    </li>";
+            }else{
+                echo "<li class='nav-item'>
+                        <a class='nav-link' href='login.php'>Log In</a>
+                      </li>
+                      <li class='nav-item'>
+                          <a class='nav-link' href='register.php'>Sign Up</a>
+                      </li>";
+            } ?>
         </ul>
     </div>
 </nav>
-
-
-
-
-
-
-      <?php
-        if(strlen($current) == 0)
-        {
-          ?>
-
-
-      <?php }
-      else{ ?>
-
-
-      <?php } ?>
