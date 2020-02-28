@@ -35,12 +35,14 @@
             echo "<img src='img/userImages/$imagePost[$i]' alt='post image'><br>";//image
         }
         if($bezoek != $current){
-            if(!in_array($current,$likeArray)){//like button
+            if(!in_array($current,$likeArray)){//like button kan je mischien nog veranderen naar een plusje of een hartje ofzo
                 echo "<form method='post' class=''>
-                        <button type='submit' name='like' value='$idPost[$i]'>LIKE</button>
+                        <button type='submit' name='like' value='$idPost[$i]'>Like</button>
                       </form>";
-            }else{
-              //een remove like button
+            }else{//een remove like button
+              echo "<form method='post' class=''>
+                      <button type='submit' name='removeLike' value='$idPost[$i]'>Remove Like</button>
+                    </form>";
             }
         }
         echo "<br>";

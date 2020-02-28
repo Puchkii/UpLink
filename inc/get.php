@@ -24,10 +24,19 @@
        if(in_array($bezoek,$followigProfile)){
           $following = true;
        }
+       $sql = "SELECT created_at,following,followers FROM `users` WHERE username = '$bezoek';";
+       $result = $conn->query($sql);
+       if ($result->num_rows > 0) {
+          while($row = $result->fetch_assoc()) {
+              $createdDBBE = $row['created_at'];
+              $followigProfileBE = unserialize($row['following']);
+              $followersProfileBE = unserialize($row['followers']);
+          }
+      }
    }
 
    $nu = time();
-   $date = strtotime($createdDB);
+   $date = strtotime($createdDBBE);
    $datediff = $nu - $date;
 
    $dagen = round($datediff / (60 * 60 * 24));

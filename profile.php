@@ -35,7 +35,7 @@
         <form class="" method="post">
             <?php
               if($current){
-                  echo "<h1 class='center'>$bezoek</h1>";
+                  echo "<h1 class='center'>$bezoek</h1> <h2></h2>";
                   if($following){
                       echo "<button type='submit' name='unfollow' class='btn btn-outline-secondary'>Unfollow</button>";
                   }else{
@@ -55,12 +55,7 @@
             </div>
             <div class="col-sm-4">
               <h2>Followers</h2>
-              <p>User</p>
-              <p>User</p>
-              <p>User</p>
-              <p>User</p>
-              <p>User</p>
-              <p>User</p>
+              <?php include 'comp/followers.php'; ?>
             </div>
             <div class="w-100"></div>
             <div class="col-sm-8">
