@@ -24,7 +24,7 @@
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Feed</a>
+                <a class="nav-link" href="feed.php">Feed</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="trending.php">Trending</a>
