@@ -27,10 +27,10 @@
                 <a class="nav-link" href="#">Feed</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Trending</a>
+                <a class="nav-link" href="trending.php">Trending</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Followers</a>
+                <a class="nav-link" href="following.php">Following</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="settings.php">Settings</a>

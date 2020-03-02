@@ -78,7 +78,7 @@
          if ($conn->query($sql) === true) {
              $sql = "UPDATE `users` SET `following` = '$compressedFollowing' WHERE username = '$current';";
              if ($conn->query($sql) === true) {
-               //volgt nu de persoon en de persoon heeft er nu een nieuwe volger bij
+               //je ontvolgt het account nu
              }
          }
      }
