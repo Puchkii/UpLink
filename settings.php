@@ -24,7 +24,7 @@
       // include 'inc/settings.php';
       include 'inc/logout.php';
       include 'comp/navbar.php';
-      // include 'comp/settings.php';
+      include 'comp/settings.php';
 
     ?>
 
