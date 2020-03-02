@@ -36,10 +36,12 @@
             <?php
               if($current){
                   echo "<h1 class='center'>$bezoek</h1> <h2></h2>";
-                  if($following){
-                      echo "<button type='submit' name='unfollow' class='btn btn-outline-secondary'>Unfollow</button>";
-                  }else{
-                      echo "<button type='submit' name='follow' class='btn btn-outline-secondary'>Follow</button>";
+                  if($bezoek != $current){ //zo dat je niet je zelf kan volgen
+                      if($following){
+                          echo "<button type='submit' name='unfollow' class='btn btn-outline-secondary'>Unfollow</button>";
+                      }else{
+                          echo "<button type='submit' name='follow' class='btn btn-outline-secondary'>Follow</button>";
+                      }
                   }
               }
              ?>
@@ -55,7 +57,9 @@
             </div>
             <div class="col-sm-4">
               <h2>Followers</h2>
-              <?php include 'comp/followers.php'; ?>
+              <form class="" method="post">
+                <?php include 'comp/followers.php'; ?>
+              </form>
             </div>
             <div class="w-100"></div>
             <div class="col-sm-8">
