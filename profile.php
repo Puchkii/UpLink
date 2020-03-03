@@ -65,9 +65,9 @@
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, nobis!
                 Vero rem et repellat esse similique dolorum nihil eligendi animi dignissimos!
                 Cupiditate quae necessitatibus mollitia voluptas assumenda. Est, unde sequi!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Iusto, beatae dolores fugiat magnam voluptatibus asperiores tempora fugit nobis.
-                  Qui saepe, quos ullam aperiam est assumenda aut voluptatem iste incidunt dolores.</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Iusto, beatae dolores fugiat magnam voluptatibus asperiores tempora fugit nobis.
+                Qui saepe, quos ullam aperiam est assumenda aut voluptatem iste incidunt dolores.</p>
             </div>
             <div class="col-sm-4">
               <h2>Jobs</h2>

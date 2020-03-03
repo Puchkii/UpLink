@@ -24,6 +24,7 @@ Me<br>
 Jobs<br>
 <form class="" method="post">
   <input type="text" name="jobTitle" value=""><br>
+  <textarea name="jobInfo" rows="8" cols="80"></textarea>
   <input type="submit" name="AddJob" value="Add">
 </form>
 
