@@ -14,17 +14,17 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- back end stuff om username in titelbalk te laden -->
-    <title>UpL!nk - User</title>
+    <title>UpL!nk - Profile</title>
   </head>
   <body>
 
     <?php
       include 'inc/get.php';
       include 'inc/logout.php';
-      include 'inc/post.php';
-      include 'inc/follow.php';
       include 'comp/navbar.php';
+      include 'inc/post.php';
       include 'comp/post.php';
+      include 'inc/follow.php';
       // include 'comp/footer.php';
       ?>
 
