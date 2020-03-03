@@ -9,10 +9,10 @@
           <input type="password" class="form-control" placeholder="Enter password" name="password">
         </div>
       </div>
+      <br>
       <button type="submit" name="login" class="btn btn-outline-secondary">Log in</button>
     </form>
-  <br><br>
-    <br><br>
+    <br>
     <button href="register.php" class="btn btn-outline-secondary">Dont have an Account?</button>
     <br><br>
     <button href="#" class="btn btn-outline-secondary">Forgot password?</button>
