@@ -16,10 +16,6 @@
     </div>
   </div>
 <?php } ?>
-
-
-<!-- vanaf deze lijn naar beneden moet de php weer worden toegepast. ik heb je php code onderaan gelaten
-      zodat je het alleen hoeft te plakken op de juiste plaats -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
@@ -43,7 +39,7 @@
         </ul>
     </div>
     <div class="mx-auto order-0">
-        <a class="navbar-brand mx-auto" href="index.php">UpL!nk</a>
+        <a class="navbar-brand mx-auto" href="/UpLink">UpL!nk</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
             <span class="navbar-toggler-icon"></span>
         </button>
