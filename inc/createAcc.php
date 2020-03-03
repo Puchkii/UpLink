@@ -1,6 +1,7 @@
 
 <?php
   include 'block.php';
+  //mysql_real_escape_string werkt niet voor jouw kevin ik weet niet waarom.
   $usernameForm = mysql_real_escape_string(strip_tags($_POST['username']));
   $emailForm = mysql_real_escape_string(strip_tags($_POST['email']));
   $dateForm = mysql_real_escape_string(strip_tags($_POST['birthDate']));

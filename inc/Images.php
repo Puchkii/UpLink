@@ -1,6 +1,6 @@
 <?php
   include 'block.php';
-
+  //voor het uploaden van images
   function UploadIMG($loc,$bestand){
       $target_dir = $loc;//locatie image
       $target_file = $target_dir . basename($_FILES[$bestand]["name"]);

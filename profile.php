@@ -25,9 +25,6 @@
       include 'inc/follow.php';
       include 'comp/navbar.php';
       include 'comp/post.php';
-      // de footer maakte de profile page echt lelijk want het kwam in midden
-      // of bovenaan hoe ik het ook verplaats in de includes het blijft lelijk
-      // dus de beste snelle oplossing die ik had was commenten
       // include 'comp/footer.php';
       ?>
 
