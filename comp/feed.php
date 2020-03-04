@@ -1,3 +1,4 @@
+  <!-- de feed knop is zelfde als de middenste navbar UpL!nk knop/logo -->
 
 <?php
   /*

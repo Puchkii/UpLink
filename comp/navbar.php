@@ -19,21 +19,18 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="feed.php">Feed</a>
+            <li class="nav-item">
+                <a class="nav-link btn bg-dark text-white" href="trending.php">Trending</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="trending.php">Trending</a>
+                <a class="nav-link btn bg-dark text-white" href="following.php">Following</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="following.php">Following</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="settings.php">Settings</a>
+                <a class="nav-link btn bg-dark text-white" href="settings.php">Settings</a>
             </li>
             <li class="nav-item">
               <form class="" method="post"><!--kevin dit moet een form zijn om naar het goede account te gaan-->
-                  <button class="nav-link" type="submit" value="<?php echo $current; ?>" name="bezoek">Profile</button>
+                  <button class="btn bg-dark text-white" type="submit" value="<?php echo $current; ?>" name="bezoek">Profile</button>
               </form>
             </li>
         </ul>
@@ -54,14 +51,14 @@
             <?php if($current){
               echo "<li class='nav-item'>
                       <form method='post'>
-                        <button type='submit' name='logout' class='nav-link'>Logout</button>
+                        <button type='submit' name='logout' class='nav-link btn bg-dark text-white'>Logout</button>
                       </form>
                     </li>";
             }else{
-                echo "<li class='nav-item'>
+                echo "<li class='nav-link btn bg-dark text-white'>
                         <a class='nav-link' href='login.php'>Log In</a>
                       </li>
-                      <li class='nav-item'>
+                      <li class='nav-link btn bg-dark text-white'>
                           <a class='nav-link' href='register.php'>Sign Up</a>
                       </li>";
             } ?>
