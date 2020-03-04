@@ -30,7 +30,7 @@
             </li>
             <li class="nav-item">
               <form class="" method="post"><!--kevin dit moet een form zijn om naar het goede account te gaan-->
-                  <button class="btn bg-dark text-white" type="submit" value="<?php echo $current; ?>" name="bezoek">Profile</button>
+                  <button class="nav-link btn bg-dark text-white" type="submit" value="<?php echo $current; ?>" name="bezoek">Profile</button>
               </form>
             </li>
         </ul>
@@ -45,7 +45,7 @@
         <ul class="navbar-nav ml-auto">
             <li>
               <form class=""  method="post">
-                  <input type="text" placeholder="Gotta catch em all" name="zoeken" class="rounded">
+                  <input type="text" placeholder="Zoek een leven" name="zoeken" class="rounded nav-link">
               </form>
             </li>
             <?php if($current){
