@@ -15,7 +15,7 @@
 
   $reg1 = "/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/i";//wachtwoord check.
 
-  if(isset($_POST['submitReg'])){
+  if(isset($_POST['register'])){
 
       $sql = "SELECT username FROM `users` WHERE username = '$usernameForm';";
       $result = $conn->query($sql);
@@ -49,7 +49,7 @@
           }
       }
 
-      if( preg_match($reg1,$password1Form)){
+      if(preg_match($reg1,$password1Form)){
           if(!$password1Form == $password2Form){
               $fouten[5] = 1;//als de wachtwoorden niet het zelfde zijn
           }
@@ -67,7 +67,10 @@
       if($falseCheck){//gelukt
           $sql = "INSERT INTO `users` (`username`,`password`,`Email`,`Birth_Date`) VALUES ('$usernameForm','$password1Form','$emailForm','$dateForm');";
           if ($conn->query($sql) === true) {
-              header('Location: index.php');//ga naar index
+              $sql = "INSERT INTO `information` (`User`,`About`) VALUES ('$usernameForm','No user information');";
+              if ($conn->query($sql) === true) {
+                  header('Location: index.php');//ga naar index
+              }
           }
       }
       else{//mislukt
