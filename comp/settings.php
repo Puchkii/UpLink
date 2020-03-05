@@ -16,7 +16,6 @@
 
   Me<br>
   <form class="" method="post">
-    <input type="text" name="username" class="rounded" value=""><br>
     <textarea name="aboutme" rows="8" class="rounded" cols="80"><?php echo $aboutDB; ?></textarea>
     <input type="submit" name="Submit" value="Change" class="btn btn-outline-secondary">
   </form>
