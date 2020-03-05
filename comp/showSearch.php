@@ -12,5 +12,4 @@
            }
         }
     }
-    //kevin je moet niet in de echo dit doen class="btn btn-outline-secondary" maar dit class='btn btn-outline-secondary'
  ?>
