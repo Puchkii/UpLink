@@ -16,6 +16,8 @@
 
   $reg1 = "/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/i";//wachtwoord check.
 
+  $jobDEL = $_POST['deleteJob'];
+
   //password change
   if($current){//als er ingelogt is
       if($_POST['ChangePassword']){
@@ -30,6 +32,8 @@
           reloadPost();
       }
       //fout meldingen moeten er nog komen van bv de naam is all ingebruik
+      //denk niet dat de optie van je naam veranderen er komt om dat moet je echt heel veel dingen updaten:
+      //je naam in alle tables de naam bij alle mensen die je volgen en andersom
       if($_POST['Submit']){//about me
           if(!empty($newUsername)){
               $sql = "SELECT username FROM `users` WHERE username = '$newUsername';";
@@ -51,14 +55,33 @@
       }
       //jobs
       if($_POST['AddJob']){
-        /*moet in een array eerste slot naam tweede slot information*/
-          // if(!empty()){
-          //
-          // }
+          if(!empty($jobs)){
+               if(empty($jobsDB)){
+                   $jobsDB = [$jobs,$jobInfo];
+               }else{
+                   array_push($jobsDB,$jobs);
+                   array_push($jobsDB,$jobInfo);
+               }
+               $compressedJobs = serialize($jobsDB);
+
+               $sql = "UPDATE `information` SET `jobs` = '$compressedJobs' WHERE User = '$current';";
+               if ($conn->query($sql) === true) {}
+          }
           reloadPost();
       }
+
+      if(isset($jobDEL)){//delete job
+          unset($jobsDB[$jobDEL]);
+          unset($jobsDB[$jobDEL+1]);
+
+          $compressedJobs = serialize($jobsDB);
+
+          $sql = "UPDATE `information` SET `jobs` = '$compressedJobs' WHERE User = '$current';";
+          if ($conn->query($sql) === true) {}
+        	reloadPost();
+      }
   }
-  echo $_SESSION['test'];
+
 
 
  ?>

@@ -28,4 +28,12 @@
     <input type="submit" name="AddJob" value="Add" class="btn btn-outline-secondary">
   </form>
 </div>
+<form class=""  method="post">
+  <?php
+      for($i=0; $i < count($jobsDB)/2; $i++){
+          echo $jobsDB[$i]."<br>".$jobsDB[$i+1]."<br><button class='' name='deleteJob' value='$i'>-</button>";
+      }
+   ?>
+</form>
+
 <!--Een lijst van job titles die je kan veranderen en verweideren moet hier nog komen-->

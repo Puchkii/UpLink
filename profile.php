@@ -71,6 +71,9 @@
             </div>
             <div class="col-sm-4">
               <h2>Jobs</h2>
+              <?php
+                  include 'comp/jobs.php';
+               ?>
               <p>Jobtitle</p>
               <p>Jobtitle</p>
               <p>Jobtitle</p>

@@ -5,7 +5,7 @@
   if(!isset($_COOKIE['cookies']))//als cookie niet gezet is show cookie melding
   {
  ?>
-  <div class="container">
+  <div class="container" id='Cookies'>
     <div class="row jumbotron">
       <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
         <p class="lead">We need you to accept our cookies to optimise site performance.</p>
@@ -36,7 +36,7 @@
         </ul>
     </div>
     <div class="mx-auto order-0">
-        <a class="navbar-brand mx-auto" href="/UpLink">UpL!nk</a>
+        <a class="navbar-brand mx-auto" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">UpL!nk</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
             <span class="navbar-toggler-icon"></span>
         </button>

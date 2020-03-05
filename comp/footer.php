@@ -78,7 +78,7 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://i.pinimg.com/originals/be/f9/3d/bef93d938ddb7f64b711a301447be1a3.jpg">Copyright By Kevin & Dylan Corporation</a>
+    <a href="https://cdn.discordapp.com/attachments/489702608143908869/684733539383509017/unknown.png">Copyright By Kevin & Dylan Corporation</a>
   </div>
   <!-- Copyright -->
 
