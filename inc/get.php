@@ -28,7 +28,7 @@
             $aboutDB = $row['About'];
             $jobsDB = unserialize($row['jobs']);
         }
-    }
+     }
 
    if($bezoek){
        if(in_array($bezoek,$followigProfile)){
@@ -43,6 +43,16 @@
               $followersProfileBE = unserialize($row['followers']);
           }
       }
+
+      $sql = "SELECT About,jobs FROM `information` WHERE User = '$bezoek';";
+      $result = $conn->query($sql);
+      if ($result->num_rows > 0) {
+         while($row = $result->fetch_assoc()) {
+             $aboutBE = $row['About'];
+             $jobsBE = unserialize($row['jobs']);
+         }
+      }
+
    }
 
    $nu = time();
