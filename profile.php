@@ -32,7 +32,7 @@
         <form class="" method="post">
             <?php
               if($current){
-                  echo "<h1 class='center'>$bezoek</h1> <h2></h2>";
+                  echo "<h1 class='center'>$bezoek</h1> <h2>Followers : $followersCount Following : $followCount </h2>";
                   if($bezoek != $current){ //zo dat je niet je zelf kan volgen
                       if($following){
                           echo "<button type='submit' name='unfollow' class='btn btn-outline-secondary'>Unfollow</button>";

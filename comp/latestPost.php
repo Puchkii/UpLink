@@ -34,7 +34,7 @@
         if($imagePost[$i] != $bezoek){//checkt als er een image in de post zit
             echo "<img src='img/userImages/$imagePost[$i]' alt='post image'><br>";//image
         }
-        if($bezoek != $current){
+        if($bezoek != $current && $current){
             if(!in_array($current,$likeArray)){//like button kan je mischien nog veranderen naar een plusje of een hartje ofzo
                 echo "<form method='post' class=''>
                         <button type='submit' name='like' value='$idPost[$i]'>Like</button>

@@ -41,6 +41,8 @@
               $createdDBBE = $row['created_at'];
               $followigProfileBE = unserialize($row['following']);
               $followersProfileBE = unserialize($row['followers']);
+              $followersCount = Count($followersProfileBE);
+              $followCount = Count($followigProfileBE);
           }
       }
 
