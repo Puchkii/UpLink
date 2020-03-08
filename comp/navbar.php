@@ -22,7 +22,6 @@
             <li class="nav-item">
                 <a class="nav-link btn bg-dark text-white" href="trending.php">Trending</a>
             </li>
-            <?php if($current){ //voor als je niet ingelogt bent dat je dan deze buttons dan niet ziet?>
             <li class="nav-item">
                 <a class="nav-link btn bg-dark text-white" href="following.php">Following</a>
             </li>
@@ -34,7 +33,6 @@
                   <button class="nav-link btn bg-dark text-white" type="submit" value="<?php echo $current; ?>" name="bezoek">Profile</button>
               </form>
             </li>
-          <?php } ?>
         </ul>
     </div>
     <div class="mx-auto order-0">
