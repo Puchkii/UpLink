@@ -13,7 +13,7 @@
     <!-- Selfmade-->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- back end stuff om username in titelbalk te laden -->
+    <!-- back end stuff hier doen DYLAN!!! om username in titelbalk te laden -->
     <title>UpL!nk - Profile</title>
   </head>
   <body>
