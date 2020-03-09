@@ -13,7 +13,7 @@
     <!-- Selfmade-->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- back end stuff om username in titelbalk te laden -->
+    <!-- back end stuff hier doen DYLAN!!! om username in titelbalk te laden -->
     <title>UpL!nk - Profile</title>
   </head>
   <body>
@@ -32,7 +32,7 @@
         <form class="" method="post">
             <?php
               if($current){
-                  echo "<h1 class='center'>$bezoek</h1> <h2>Followers : $followersCount Following : $followCount </h2>";
+                  echo "<h1 class='center'>$bezoek</h1> <h2></h2>";
                   if($bezoek != $current){ //zo dat je niet je zelf kan volgen
                       if($following){
                           echo "<button type='submit' name='unfollow' class='btn btn-outline-secondary'>Unfollow</button>";

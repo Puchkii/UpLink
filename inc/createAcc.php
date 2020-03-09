@@ -39,13 +39,13 @@
       if(strlen($checkMail) != 0){
           $fouten[1] = 1;//als email all de database zit
       }
-      if(strlen($usernameForm) <= 1){//moet langer dan 1 letter //kan weg denkt
+      if(strlen($usernameForm) <= 1){//moet langer dan 1 letter
           $fouten[2] = 1;//als de username tekort is
       }
 
       for($i=1; $i<=count($checkArray)-1; $i++){//checkt niet de username die is all gecheckt
           if (empty($checkArray[$i])) {
-              $fouten[4] = 1; //als de input leeg is
+              $fouten[4] = 1; //moet nog aangepast worden//als de input leeg is
           }
       }
 
