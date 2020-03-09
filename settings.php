@@ -20,7 +20,6 @@
 
     <?php
       include 'inc/get.php';
-      include 'inc/login.php';
       include 'inc/UpdateSettings.php';
       include 'inc/logout.php';
       include 'comp/navbar.php';

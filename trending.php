@@ -15,16 +15,17 @@
     <title>Trending</title>
   </head>
   <body>
-  
+
     <?php
       include 'inc/get.php';
       include 'inc/logout.php';
+      include 'inc/post.php';
       include 'comp/navbar.php';
       ?>
     <br>
     <div class="container">
       <?php
-      include 'comp/showTrending.php';
+        include 'comp/showTrending.php';
       ?>
     </div>
 

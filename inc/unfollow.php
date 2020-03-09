@@ -1,7 +1,7 @@
 <?php
     $person = $_POST['unfollow'];
     if(isset($_POST['unfollow'])){
-        $person = $followigProfile[$person];
+        $person = $followingProfile[$person];
         $sql = "SELECT followers FROM `users` WHERE username = '$person';";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
@@ -32,7 +32,7 @@
        if ($conn->query($sql) === true) {
            $sql = "UPDATE `users` SET `following` = '$compressedFollowing' WHERE username = '$current';";
            if ($conn->query($sql) === true) {
-             
+
            }
        }
        reloadPost();
