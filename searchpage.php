@@ -21,7 +21,6 @@
 
     <?php
       include 'inc/get.php';
-      include 'inc/login.php';
       include 'inc/logout.php';
       include 'comp/navbar.php';
       ?>

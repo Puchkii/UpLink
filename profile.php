@@ -23,7 +23,6 @@
       include 'inc/logout.php';
       include 'comp/navbar.php';
       include 'inc/post.php';
-      include 'comp/post.php';
       include 'inc/follow.php';
       // include 'comp/footer.php';
       ?>
@@ -32,7 +31,7 @@
         <form class="" method="post">
             <?php
               if($current){
-                  echo "<h1 class='center'>$bezoek</h1> <h2></h2>";
+                  echo "<h1 class='center'>$bezoek</h1> Followers : $followingAmmount ";
                   if($bezoek != $current){ //zo dat je niet je zelf kan volgen
                       if($following){
                           echo "<button type='submit' name='unfollow' class='btn btn-outline-secondary'>Unfollow</button>";
@@ -44,6 +43,7 @@
              ?>
          </form>
         <hr class="my-4">
+          <?php include 'comp/post.php'; ?>
           <div class="row">
             <div class="col-sm-8">
               <h2>Latest posts</h2>

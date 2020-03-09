@@ -36,7 +36,7 @@
         </ul>
     </div>
     <div class="mx-auto order-0">
-        <a class="navbar-brand mx-auto" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">UpL!nk</a>
+        <a class="navbar-brand mx-auto" href="feed.php">UpL!nk</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
             <span class="navbar-toggler-icon"></span>
         </button>

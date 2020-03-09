@@ -1,5 +1,5 @@
 <?php
-      error_reporting(0);
+      // error_reporting(0);
       session_start();
       include 'db.php';
       include 'block.php';
@@ -16,7 +16,7 @@
              $usernameDB = $row['username'];
              $passwordDB = $row['password'];
              $createdDB = $row['created_at'];
-             $followigProfile = unserialize($row['following']);
+             $followingProfile = unserialize($row['following']);
              $followersProfile = unserialize($row['followers']);
          }
      }
@@ -31,7 +31,7 @@
      }
 
    if($bezoek){
-       if(in_array($bezoek,$followigProfile)){
+       if(in_array($bezoek,$followingProfile)){
           $following = true;
        }
        $sql = "SELECT created_at,following,followers FROM `users` WHERE username = '$bezoek';";
@@ -39,8 +39,9 @@
        if ($result->num_rows > 0) {
           while($row = $result->fetch_assoc()) {
               $createdDBBE = $row['created_at'];
-              $followigProfileBE = unserialize($row['following']);
+              $followingProfileBE = unserialize($row['following']);
               $followersProfileBE = unserialize($row['followers']);
+              $followingAmmount = Count($followersProfileBE);
           }
       }
 
@@ -54,12 +55,6 @@
       }
 
    }
-
-   $nu = time();
-   $date = strtotime($createdDBBE);
-   $datediff = $nu - $date;
-
-   $dagen = round($datediff / (60 * 60 * 24));
 
    function reloadPost(){
         echo "<script>

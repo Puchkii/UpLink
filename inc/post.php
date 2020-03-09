@@ -54,27 +54,29 @@
     }
 
     $unlike = $_POST['removeLike'];
+
     if(isset($unlike)){
-        if($bezoek != $current){
-            $sql = "SELECT likers FROM `post` WHERE Id = '$unlike';";
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-               while($row = $result->fetch_assoc()) {
-                   $LikersArray = unserialize($row['likers']);
-               }
+        $sql = "SELECT likers,Username FROM `post` WHERE Id = '$unlike';";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+           while($row = $result->fetch_assoc()) {
+               $LikersArray = unserialize($row['likers']);
+               $usernamePost = $row['Username'];
            }
-           if(in_array($current,$LikersArray)){
-               $key = array_search($current, $LikersArray);
-               unset($LikersArray[$key]);
-           }
+        }
+        if($usernamePost != $current){
+            if(in_array($current,$LikersArray)){
+                $key = array_search($current, $LikersArray);
+                unset($LikersArray[$key]);
+            }
 
-           $compressedLikes = serialize($LikersArray);
+            $compressedLikes = serialize($LikersArray);
 
-           $sql = "UPDATE `post` SET `likers` = '$compressedLikes' WHERE Id = '$unlike';";
-           if ($conn->query($sql) === true) {
-           }
-       }
-       reloadPost();
+            $sql = "UPDATE `post` SET `likers` = '$compressedLikes' WHERE Id = '$unlike';";
+            if ($conn->query($sql) === true) {
+            }
+        }
+        reloadPost();
     }
 
  ?>

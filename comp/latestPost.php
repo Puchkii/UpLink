@@ -1,7 +1,7 @@
 <?php
-    $t = 0;
 
-    $sql = "SELECT id,title,Text,Img,DatePost FROM `post` WHERE Username = '$bezoek';";
+    $t = 0;
+    $sql = "SELECT id,title,Text,Img,DatePost FROM `post` WHERE Username = '$bezoek' ORDER BY `DatePost`;";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
        while($row = $result->fetch_assoc()) {
@@ -14,7 +14,7 @@
        }
     }
 
-    for($i=$t-1; $i>=0; $i--){
+    for($i=0; $i<$t; $i++){
         $sql = "SELECT likers FROM `post` WHERE id = '$idPost[$i]';";//voor de like check/aantal likes
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
