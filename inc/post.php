@@ -8,11 +8,12 @@
     $postPost = true;
 
     if(isset($_POST['Update'])){
+        $date = date("Y/m/d/h:i");
         if(empty($title) && empty($text)){//checkt als de inputs zijn ingevult
             $postPost = false;
         }
         if($postPost){
-            $sql = "INSERT INTO `post` (`Title`,`Text`,`Img`,`Username`) VALUES ('$title','$text','$current$foto','$current');";
+            $sql = "INSERT INTO `post` (`Title`,`Text`,`Img`,`Username`,`DatePost`) VALUES ('$title','$text','$current$foto','$current','$date');";
             if ($conn->query($sql) === true) {
                 if($foto){
                     $loc = "img/userImages/";
