@@ -2,11 +2,11 @@
 <?php
   include 'block.php';
   //mysql_real_escape_string werkt niet voor jouw kevin ik weet niet waarom.
-  $usernameForm = mysqli_real_escape_string(strip_tags($_POST['username']));
-  $emailForm = mysqli_real_escape_string(strip_tags($_POST['email']));
-  $dateForm = mysqli_real_escape_string(strip_tags($_POST['birthDate']));
-  $password1Form = mysqli_real_escape_string(strip_tags($_POST['password']));
-  $password2Form = mysqli_real_escape_string(strip_tags($_POST['passwordRepeat']));
+  $usernameForm = mysqli_real_escape_string($conn,strip_tags($_POST['username']));
+  $emailForm = mysqli_real_escape_string($conn,strip_tags($_POST['email']));
+  $dateForm = mysqli_real_escape_string($conn,strip_tags($_POST['birthDate']));
+  $password1Form = mysqli_real_escape_string($conn,strip_tags($_POST['password']));
+  $password2Form = mysqli_real_escape_string($conn,strip_tags($_POST['passwordRepeat']));
 
   $checkArray = [$usernameForm,$emailForm,$dateForm,$password1Form,$password2Form];
 
