@@ -37,7 +37,7 @@
                             <a href='' class='card-link'>Date : $DatePost</a>
                             <a href='' class='card-link'>Likes : $likes</a>";
 
-               if(!in_array($current,$likeArray)){//like button
+               if(!in_array($current,$likeArray) && $current){//like button
                    echo "<form method='post' class=''>
                            <button type='submit' class'btn btn-outline-secondary' name='like' value='$idPost'>Like</button>
                          </form>";
@@ -46,7 +46,7 @@
                            <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost'>Remove Like</button>
                          </form>";
                }
-
+               
                echo "</div></div></div><br>";//afsluiting divs
            }
         }
