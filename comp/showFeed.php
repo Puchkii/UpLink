@@ -21,6 +21,11 @@
                $userPost = $row['Username'];
                $likeArray = unserialize($row['likers']);
                $likes = Count($likeArray);
+               usort($array, function($a1, $a2) {
+                  $v1 = strtotime($a1['date']);
+                  $v2 = strtotime($a2['date']);
+                  return $v1 - $v2; // $v2 - $v1 to reverse direction
+               });
 
                //post kaartjes
                echo "<div class='row'>
