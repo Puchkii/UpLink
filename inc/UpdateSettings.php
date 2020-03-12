@@ -2,14 +2,14 @@
 
   /*Mischien meer dingen zo als...*/
 
-  $passwordOld = mysql_real_escape_string(strip_tags($_POST['oudwachtwoord']));//oude wachtwoord
-  $passwordNew1 = mysql_real_escape_string(strip_tags($_POST['password1']));//nieuwe wachtwoord
-  $passwordNew2 = mysql_real_escape_string(strip_tags($_POST['password2']));//nieuwe wachtwoord double check
+  $passwordOld = mysqli_real_escape_string(strip_tags($_POST['oudwachtwoord']));//oude wachtwoord
+  $passwordNew1 = mysqli_real_escape_string(strip_tags($_POST['password1']));//nieuwe wachtwoord
+  $passwordNew2 = mysqli_real_escape_string(strip_tags($_POST['password2']));//nieuwe wachtwoord double check
 
-  $aboutMe = mysql_real_escape_string(strip_tags($_POST['aboutme']));//about me update
+  $aboutMe = mysqli_real_escape_string(strip_tags($_POST['aboutme']));//about me update
 
-  $jobs = mysql_real_escape_string(strip_tags($_POST['jobTitle']));
-  $jobInfo = mysql_real_escape_string(strip_tags($_POST['jobInfo']));
+  $jobs = mysqli_real_escape_string(strip_tags($_POST['jobTitle']));
+  $jobInfo = mysqli_real_escape_string(strip_tags($_POST['jobInfo']));
 
   $reg1 = "/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/i";//wachtwoord check.
 
