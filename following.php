@@ -21,11 +21,12 @@
       include 'inc/logout.php';
       include 'inc/unfollow.php';
       include 'comp/navbar.php';
+      ?>
+
+    <div class="container"><br>
+    <?php
       include 'comp/showFollowing.php';
     ?>
-
-    <div class="container">
-
     </div>
 
     <!-- Selfmade JS -->
