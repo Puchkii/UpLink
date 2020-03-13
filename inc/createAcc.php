@@ -2,13 +2,13 @@
 <?php
   include 'block.php';
   //mysql_real_escape_string werkt niet voor jouw kevin ik weet niet waarom.
-  $usernameForm = mysql_real_escape_string(strip_tags($_POST['username']));
-  $emailForm = mysql_real_escape_string(strip_tags($_POST['email']));
-  $dateForm = mysql_real_escape_string(strip_tags($_POST['birthDate']));
-  $password1Form = mysql_real_escape_string(strip_tags($_POST['password']));
-  $password2Form = mysql_real_escape_string(strip_tags($_POST['passwordRepeat']));
+  $usernameForm = mysqli_real_escape_string($conn,strip_tags($_POST['username']));
+  $emailForm = mysqli_real_escape_string($conn,strip_tags($_POST['email']));
+  $dateForm = mysqli_real_escape_string($conn,strip_tags($_POST['birthDate']));
+  $password1Form = mysqli_real_escape_string($conn,strip_tags($_POST['password']));
+  $password2Form = mysqli_real_escape_string($conn,strip_tags($_POST['passwordRepeat']));
 
-  $checkArray= [$usernameForm,$emailForm,$dateForm,$password1Form,$password2Form];
+  $checkArray = [$usernameForm,$emailForm,$dateForm,$password1Form,$password2Form];
 
   $fouten = [0,0,0,0,0,0,0,0,0,0];//fouten check voor later bij de fout meldingen
   $falseCheck = true;//voor als alles goed is ingevult kan mischien anders
@@ -16,7 +16,7 @@
   $reg1 = "/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/i";//wachtwoord check.
 
   if(isset($_POST['register'])){
-
+      $_SESSION['test'] = $checkArray;
       $sql = "SELECT username FROM `users` WHERE username = '$usernameForm';";
       $result = $conn->query($sql);
       if ($result->num_rows > 0) {

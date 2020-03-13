@@ -22,17 +22,19 @@
             <li class="nav-item">
                 <a class="nav-link btn bg-dark text-white" href="trending.php">Trending</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link btn bg-dark text-white" href="following.php">Following</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link btn bg-dark text-white" href="settings.php">Settings</a>
-            </li>
-            <li class="nav-item">
-              <form class="" method="post"><!--kevin dit moet een form zijn om naar het goede account te gaan-->
-                  <button class="nav-link btn bg-dark text-white" type="submit" value="<?php echo $current; ?>" name="bezoek">Profile</button>
-              </form>
-            </li>
+            <?php if($current){ ?>
+              <li class="nav-item">
+                  <a class="nav-link btn bg-dark text-white" href="following.php">Following</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link btn bg-dark text-white" href="settings.php">Settings</a>
+              </li>
+              <li class="nav-item">
+                <form class="" method="post"><!--kevin dit moet een form zijn om naar het goede account te gaan-->
+                    <button class="nav-link btn bg-dark text-white" type="submit" value="<?php echo $current; ?>" name="bezoek">Profile</button>
+                </form>
+              </li>
+            <?php } ?>
         </ul>
     </div>
     <div class="mx-auto order-0">
