@@ -13,18 +13,16 @@
     <!-- Selfmade CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
+    <script src="js/scroll.js"></script>
     <title>UpL!nk</title>
   </head>
   <body>
-
     <?php
       include 'inc/get.php';
       include 'inc/logout.php';
       include 'inc/post.php';
       include 'comp/navbar.php';
     ?>
-    <br>
 
     <div class="container">
       <?php include 'comp/showFeed.php'; ?>
