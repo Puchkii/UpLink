@@ -30,9 +30,9 @@
       <div class="container">
         <form class="" method="post">
             <?php
-              if($current){
+              if($current || $bezoek){
                   echo "<h1 class='center'>$bezoek</h1> Followers : $followingAmmount ";
-                  if($bezoek != $current){ //zo dat je niet je zelf kan volgen
+                  if($bezoek != $current && $current){ //zo dat je niet je zelf kan volgen
                       if($following){
                           echo "<button type='submit' name='unfollow' class='btn btn-outline-secondary'>Unfollow</button>";
                       }else{
