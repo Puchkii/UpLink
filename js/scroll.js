@@ -14,21 +14,15 @@
       return "";
   }
 
-  $(document).ready(function(){
-      window.scroll(0,300);
-  });
-// window.onload = showHeight;
+  window.onload = setTimeout(showHeight, 50);
 
   function showHeight(){
       console.log(getCookie("scroll"));
       window.scrollTo(0, getCookie("scroll"));
-      // window.scrollBy(0,getCookie("scroll"));
-
   }
 
 
-  function getHeight(){
+  function getHeight(){//set sroll height cookie
       var scrollHeight = document.documentElement.scrollTop;
       document.cookie = "scroll="+scrollHeight;
-      window.scrollTo(0, 300);
   }
