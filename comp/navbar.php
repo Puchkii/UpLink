@@ -5,6 +5,7 @@
   if(!isset($_COOKIE['cookies']))//als cookie niet gezet is show cookie melding
   {
  ?>
+ <!-- cookie banner -->
   <div class="container" id='Cookies'>
     <div class="row jumbotron">
       <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
@@ -16,6 +17,7 @@
     </div>
   </div>
 <?php } ?>
+<!-- navbar -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">

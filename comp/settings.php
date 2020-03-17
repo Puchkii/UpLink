@@ -8,22 +8,25 @@
 <div class="container-fluid">
   Change password<br>
   <form class="" method="post">
-    <input type="password" name="oudwachtwoord" class="rounded" value=""><br>
-    <input type="password" name="password1" class="rounded" value=""><br>
-    <input type="password" name="password2" class="rounded" value=""><br>
+    <input type="password" name="oudwachtwoord" class="rounded" value="" placeholder="Old Password"><br><br>
+    <input type="password" name="password1" class="rounded" value="" placeholder="New Password"><br><br>
+    <input type="password" name="password2" class="rounded" value="" placeholder="Retype new Password"><br><br>
     <input type="submit" name="ChangePassword" value="Change" class="btn btn-outline-secondary">
   </form>
 
-  Me<br>
+<br>
+  <p>Me:</p>
   <form class="" method="post">
     <textarea name="aboutme" rows="8" class="rounded" cols="80"><?php echo $aboutDB; ?></textarea>
+    <br>
     <input type="submit" name="Submit" value="Change" class="btn btn-outline-secondary">
   </form>
 
-  Jobs<br>
+<br>
+  <p>Jobs</p>
   <form class="" method="post">
-    <input type="text" name="jobTitle" class="rounded" value=""><br>
-    <textarea name="jobInfo" rows="8" class="rounded" cols="80"></textarea>
+    <input type="text" name="jobTitle" class="rounded" value=""><br><br>
+    <textarea name="jobInfo" rows="8" class="rounded" cols="80"></textarea><br>
     <input type="submit" name="AddJob" value="Add" class="btn btn-outline-secondary">
   </form>
 </div>
