@@ -31,6 +31,7 @@
             echo "<div class='row'>
                     <div class='card col' style='width: 18rem;'>
                       <div class='card-body'>
+                        <img class='card-img-top' src='...' alt='Card image cap'>
                          <h5 class='card-title'>$titlePost[$i]</h5>
                          <h6 class='card-subtitle mb-2 text-muted'>$userPost[$i]</h6>
                          <p class='card-text' onclick='getHeight()'>$textPost[$i]</p>
