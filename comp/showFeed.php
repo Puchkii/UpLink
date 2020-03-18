@@ -31,13 +31,16 @@
             echo "<div class='row'>
                     <div class='card col' style='width: 18rem;'>
                       <div class='card-body'>
-                        <img class='card-img-top' src='...' alt='Card image cap'>
                          <h5 class='card-title'>$titlePost[$i]</h5>
                          <h6 class='card-subtitle mb-2 text-muted'>$userPost[$i]</h6>
-                         <p class='card-text' onclick='getHeight()'>$textPost[$i]</p>
-                         <a href='' class='card-link'>Date : $DatePost[$i]</a>
-                         <a href='' class='card-link'>Likes : $likes[$i]</a>";
+                         <p class='card-text' onclick='getHeight()'>$textPost[$i]</p>";
 
+                         if($imagePost[$i] != $userPost[$i]){//image if statement
+                           echo "<img class='card-img-top' src='img/userImages/$imagePost[$i]' alt='Card image cap'>";
+                         }
+
+                   echo "<a href='' class='card-link'>Date : $DatePost[$i]</a>
+                         <a href='' class='card-link'>Likes : $likes[$i]</a>";
             if(!in_array($current,$likeArray[$i]) && $current){//like button
                 echo "<form method='post' class=''>
                         <button type='submit' class'btn btn-outline-secondary' name='like' value='$idPost[$i]' onclick='getHeight()'>Like</button>
@@ -52,10 +55,4 @@
     }else{
       echo "Niet ingelogt";//moet iets anders tekomen te staan zo als een inlog button of iets anders ofzo
     }
-
-    // usort($array, function($a1, $a2) {
-    //    $v1 = strtotime($a1['date']);
-    //    $v2 = strtotime($a2['date']);
-    //    return $v1 - $v2; // $v2 - $v1 to reverse direction
-    // });
  ?>
