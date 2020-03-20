@@ -5,28 +5,31 @@
 <!--De style moet hier van nog gedaan worden als het kan hou de namen er in of ongeveer het zelfde maakt nog niet veel uit
     omdat de functioneel gedeelte nog niet gemaakt is-->
 
-<div class="container-fluid">
-  Change password<br>
-  <form class="" method="post">
-    <input type="password" name="oudwachtwoord" class="rounded" value="" placeholder="Old Password"><br><br>
-    <input type="password" name="password1" class="rounded" value="" placeholder="New Password"><br><br>
-    <input type="password" name="password2" class="rounded" value="" placeholder="Retype new Password"><br><br>
+<div class="mx-auto" style="width: 1050px;">
+<br>
+  <h3>Change password:</h3><br>
+  <form class="row" method="post">
+    <input type="password" name="password1" class="rounded col" value="" placeholder="New Password"><br><br>
+    <input type="password" name="password2" class="rounded col" value="" placeholder="Retype new Password"><br><br>
+    <input type="password" name="oudwachtwoord" class="rounded col" value="" placeholder="Old Password"><br><br>
     <input type="submit" name="ChangePassword" value="Change" class="btn btn-outline-secondary">
   </form>
 
 <br>
-  <p>Me:</p>
+<hr>
+  <h3 class="">Me:<h3>
   <form class="" method="post">
-    <textarea name="aboutme" rows="8" class="rounded" cols="80"><?php echo $aboutDB; ?></textarea>
+    <textarea name="aboutme" rows="8" class="rounded" placeholder="Vertel iets over jezelf" cols="80"><?php echo $aboutDB; ?></textarea>
     <br>
     <input type="submit" name="Submit" value="Change" class="btn btn-outline-secondary">
   </form>
 
 <br>
-  <p>Jobs</p>
+<hr>
+  <h3>Jobs:<h3>
   <form class="" method="post">
-    <input type="text" name="jobTitle" class="rounded" value=""><br><br>
-    <textarea name="jobInfo" rows="8" class="rounded" cols="80"></textarea><br>
+    <input type="text" name="jobTitle" class="rounded" value="" placeholder="Wat was jou functie?"><br><br>
+    <textarea name="jobInfo" rows="8" class="rounded" placeholder="Vertel wat over wat jij daar betekent voor het bedrijf" cols="80"></textarea><br>
     <input type="submit" name="AddJob" value="Add" class="btn btn-outline-secondary">
   </form>
 </div>

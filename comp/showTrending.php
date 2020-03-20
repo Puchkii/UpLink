@@ -31,6 +31,21 @@
 
         /*Kevin hier worden de trending post uitgeprint. dus hier moet je de style aanpassen */
         /*als je dat klaar hebt dan zet ik er een max op of je zegt even hoe je alles wilt uitgeprint*/
+        
+        // hier komt hoe ik de trending post eruit wil laten zien
+        
+        // <div class="card" style="width: 18rem;">
+        //     <img class="card-img-top" src="..." alt="Card image cap">
+        //     <div class="card-body">
+        //         <div class="card-header">
+        //          hier komt je title bih
+        //          </div>
+        //         <p class="card-text">lorem ipsum blablabla suck a dick</p>
+        //          <button type='submit' class'btn btn-outline-secondary' name='like' value='$idPost[$i]'>Like</button>
+        //          <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost[$i]'>Remove Like</button>
+        //     </div>
+        // </div>
+
 
         echo $titlePost[$i]."<br>".$textPost[$i]."<br>".$DatePost[$i]."<br> Likes : ".$aantal."<br>";//title/text/date/aantal likes
         if($imagePost[$i] != $userPost[$i]){//checkt als er een image in de post zit
