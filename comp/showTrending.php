@@ -30,10 +30,9 @@
         }
 
         /*Kevin hier worden de trending post uitgeprint. dus hier moet je de style aanpassen */
-        /*als je dat klaar hebt dan zet ik er een max op of je zegt even hoe je alles wilt uitgeprint*/
-        
+
         // hier komt hoe ik de trending post eruit wil laten zien
-        
+
         // <div class="card" style="width: 18rem;">
         //     <img class="card-img-top" src="..." alt="Card image cap">
         //     <div class="card-body">
@@ -47,21 +46,28 @@
         // </div>
 
 
-        echo $titlePost[$i]."<br>".$textPost[$i]."<br>".$DatePost[$i]."<br> Likes : ".$aantal."<br>";//title/text/date/aantal likes
+        // echo $titlePost[$i]."<br>".$textPost[$i]."<br>".$DatePost[$i]."<br> Likes : ".$aantal."<br>";//title/text/date/aantal likes
+        echo " <div class='card' style='width: 18rem;'>";
         if($imagePost[$i] != $userPost[$i]){//checkt als er een image in de post zit
             echo "<img class='rounded' src='img/userImages/$imagePost[$i]' alt='post image'><br>";//image
         }
+        echo "<div class='card-body'>
+                 <div class='card-header'>
+                    $titlePost[$i]
+                  </div>
+                  <p class='card-text'>$textPost[$i]</p>
+             </div>";
         if($userPost[$i] != $current && $current){
             if(!in_array($current,$likeArray)){//like button kan je mischien nog veranderen naar een plusje of een hartje ofzo
                 echo "<form method='post' class=''>
-                        <button type='submit' class'btn btn-outline-secondary' name='like' value='$idPost[$i]'>Like</button>
+                        <button type='submit' class'btn btn-outline-secondary' name='like' onclick='getHeight()' value='$idPost[$i]'>Like</button>
                       </form>";
             }else{//een remove like button
                 echo "<form method='post' class=''>
-                        <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost[$i]'>Remove Like</button>
+                        <button type='submit' class='btn btn-outline-secondary' name='removeLike' onclick='getHeight()' value='$idPost[$i]'>Remove Like</button>
                       </form>";
             }
         }
-        echo "<br>";
+        echo "</div><br>";
     }
  ?>

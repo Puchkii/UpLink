@@ -1,5 +1,4 @@
 <?php
-    // ORDER BY `DatePost`
     if($current){
         $t = 0;
         $statement = "WHERE";
@@ -53,6 +52,6 @@
             echo "</div></div></div><br>";//afsluiting divs
         }
     }else{
-      echo "Niet ingelogt";//moet iets anders tekomen te staan zo als een inlog button of iets anders ofzo
+      header('Location: index.php');
     }
  ?>

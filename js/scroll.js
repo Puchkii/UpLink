@@ -17,10 +17,8 @@
   window.onload = setTimeout(showHeight, 50);
 
   function showHeight(){
-      console.log(getCookie("scroll"));
       window.scrollTo(0, getCookie("scroll"));
   }
-
 
   function getHeight(){//set sroll height cookie
       var scrollHeight = document.documentElement.scrollTop;

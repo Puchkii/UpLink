@@ -30,6 +30,7 @@
     </div>
 
     <!-- Selfmade JS -->
+    <script src="js/scroll.js"></script>
     <script src="js/CookieNotifier.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
