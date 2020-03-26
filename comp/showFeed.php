@@ -42,11 +42,11 @@
                          <a href='' class='card-link'>Likes : $likes[$i]</a>";
             if(!in_array($current,$likeArray[$i]) && $current){//like button
                 echo "<form method='post' class=''>
-                        <button type='submit' class'btn btn-outline-secondary' name='like' value='$idPost[$i]' onclick='getHeight()'>Like</button>
+                        <button type='submit' class'btn btn-outline-secondary' name='like' value='$idPost[$i]' onclick='getHeight()'><i class='fas fa-heart'></i>                        </button>
                       </form>";
             }else{//een remove like button
                 echo "<form method='post' class=''>
-                        <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost[$i]' onclick='getHeight()'>Remove Like</button>
+                        <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost[$i]' onclick='getHeight()'><i class='far fa-heart'></i>                        </button>
                       </form>";
             }
             echo "</div></div></div><br>";//afsluiting divs
