@@ -15,7 +15,6 @@
 
     <!-- Selfmade CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <title>UpL!nk</title>
   </head>
   <body>
