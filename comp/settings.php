@@ -15,6 +15,12 @@
     <input type="submit" name="ChangePassword" value="Change" class="btn btn-outline-secondary">
   </form>
 
+  <h3>Change Picture:</h3><br>
+  <form class="" method="post" enctype="multipart/form-data">
+    <input type="file" name="profileImage" id="profileImage" class="form-control-file" accept="image/*"><!--max 2mb foto-->
+    <input type="submit" name="ChangePicture" value="Change" class="btn btn-outline-secondary">
+  </form>
+
 <br>
 <hr>
   <h3 class="">Me:<h3>

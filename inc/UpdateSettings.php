@@ -1,6 +1,8 @@
 <?php
 
-  /*Mischien meer dingen zo als...*/
+  include 'Images.php';
+
+  $foto = $_FILES["profileImage"]["name"];
 
   $passwordOld = mysqli_real_escape_string($conn,strip_tags($_POST['oudwachtwoord']));//oude wachtwoord
   $passwordNew1 = mysqli_real_escape_string($conn,strip_tags($_POST['password1']));//nieuwe wachtwoord
@@ -25,6 +27,19 @@
                       if ($conn->query($sql) === true) {}
                   }
               }
+          }
+          reloadPost();
+      }
+
+      if(isset($_POST['ChangePicture'])){
+          if(!empty($foto)){
+              $loc = "img/profileImage/";
+              $IMG = "profileImage";
+              UploadIMG($loc,$IMG);//foto function
+              rename("img/profileImage/$foto","img/profileImage/$current$foto");
+              unlink("img/profileImage/".$profileImg);
+              $sql = "UPDATE `users` SET `ProfileImage` = '$current$foto' WHERE username = '$current';";
+              if ($conn->query($sql) === true) {}
           }
           reloadPost();
       }

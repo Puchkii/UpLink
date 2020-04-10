@@ -28,27 +28,11 @@
             $aantal = count($likeArray);
         }
 
-        /*Kevin hier worden de post geprint dus hier moet je de style aanpassen */ //die br tags zijn nu voor testen
-
-
-        //Hierin moet je de post data doen. Wigga!
-
-        // <div class="card" style="width: 18rem;">
-        //     <img class="card-img-top" src="..." alt="Card image cap">
-        //     <div class="card-body">
-        //         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        //         <form method='post' class=''>
-        //             <button type='submit' name='like' value='$idPost[$i]'>Like</button>
-        //         </form>
-        //         <form method='post' class=''>
-        //             <button type='submit' name='removeLike' value='$idPost[$i]'>Remove Like</button>
-        //         </form>
-        //     </div>
-        // </div>
-        
+        echo "<div class='card' style='width: 18rem;'>";
         echo $titlePost[$i]."<br>".$textPost[$i]."<br>".$DatePost[$i]."<br> Likes : ".$aantal."<br>";//title/text/date/aantal likes
+
         if($imagePost[$i] != $bezoek){//checkt als er een image in de post zit
-            echo "<img src='img/userImages/$imagePost[$i]' alt='post image'><br>";//image
+            echo "<img class='card-img-top' src='img/userImages/$imagePost[$i]' alt='post image'><br>";//image
         }
 
         if($bezoek != $current && $current){
@@ -62,7 +46,7 @@
                     </form>";
             }
         }
-        echo "<br>";
+        echo "</div><br>";
     }
 
  ?>
