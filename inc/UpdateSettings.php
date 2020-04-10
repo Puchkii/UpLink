@@ -37,7 +37,11 @@
               $IMG = "profileImage";
               UploadIMG($loc,$IMG);//foto function
               rename("img/profileImage/$foto","img/profileImage/$current$foto");
-              unlink("img/profileImage/".$profileImg);
+
+              if($profileImg != $current){
+                  unlink("img/profileImage/".$profileImg);
+              }
+              
               $sql = "UPDATE `users` SET `ProfileImage` = '$current$foto' WHERE username = '$current';";
               if ($conn->query($sql) === true) {}
           }
