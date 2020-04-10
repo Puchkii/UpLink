@@ -27,11 +27,16 @@
       // include 'comp/footer.php';
       ?>
 
+
+      
+
       <div class="container">
         <form class="" method="post">
             <?php
+              echo "<div class='row'>";
+              echo "<img src='#'class='img-rounded'>";//dit is voor profielfoto
               if($current || $bezoek){
-                  echo "<h1 class='center'>$bezoek</h1> Followers : $followingAmmount ";
+                  echo "<h1 class='center col'>$bezoek</h1> Followers : $followingAmmount ";
                   if($bezoek != $current && $current){ //zo dat je niet je zelf kan volgen
                       if($following){
                           echo "<button type='submit' name='unfollow' class='btn btn-outline-secondary'>Unfollow</button>";
@@ -40,6 +45,7 @@
                       }
                   }
               }
+              echo "</div>";
              ?>
          </form>
         <hr class="my-4">
