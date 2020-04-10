@@ -8,7 +8,7 @@
       $bezoek = $_SESSION['bezoekPagina'];
       $following = false;
 
-      $sql = "SELECT id,username,password,created_at,following,followers FROM `users` WHERE username = '$current';";
+      $sql = "SELECT id,username,password,created_at,following,followers,ProfileImage FROM `users` WHERE username = '$current';";
       $result = $conn->query($sql);
       if ($result->num_rows > 0) {
          while($row = $result->fetch_assoc()) {
@@ -18,6 +18,7 @@
              $createdDB = $row['created_at'];
              $followingProfile = unserialize($row['following']);
              $followersProfile = unserialize($row['followers']);
+             $profileImg = $row['ProfileImage'];
          }
      }
 
