@@ -4,7 +4,7 @@
         for($i=0; $i<=6; $i++){
             if($i < count($followersProfileBE)){
                 // echo "<p>$followersProfileBE[$i]</p>";//hoe het standaard is
-                echo "<button name='bezoek' type='submit' value='$followersProfileBE[$i]'>".$followersProfileBE[$i]."</button><br>";//zo dat je ze ook kan bezoeken
+                echo "<button name='bezoek' type='submit' value='$followersProfileBE[$i]' onclick='resetCookie()'>".$followersProfileBE[$i]."</button><br>";//zo dat je ze ook kan bezoeken
             }
             else{
                 echo "<p>....</p>";

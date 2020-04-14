@@ -14,7 +14,7 @@
     <script src="js/scroll.js"></script>
     <title>Following</title>
   </head>
-  <body  onhashchange="resetCookie()">
+  <body>
 
     <?php
       include 'inc/get.php';

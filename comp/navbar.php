@@ -22,25 +22,25 @@
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link btn bg-dark text-white" href="trending.php">Trending</a>
+                <a class="nav-link btn bg-dark text-white" onclick="resetCookie('trending.php')">Trending</a>
             </li>
             <?php if($current){ ?>
               <li class="nav-item">
-                  <a class="nav-link btn bg-dark text-white" href="following.php">Following</a>
+                  <a class="nav-link btn bg-dark text-white"  onclick="resetCookie('following.php')">Following</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link btn bg-dark text-white" href="settings.php">Settings</a>
+                  <a class="nav-link btn bg-dark text-white" onclick="resetCookie('settings.php')">Settings</a>
               </li>
               <li class="nav-item">
-                <form class="" method="post"><!--kevin dit moet een form zijn om naar het goede account te gaan-->
-                    <button class="nav-link btn bg-dark text-white" type="submit" value="<?php echo $current; ?>" name="bezoek">Profile</button>
+                <form class="" method="post">
+                    <button class="nav-link btn bg-dark text-white" type="submit" value="<?php echo $current; ?>" name="bezoek" onclick="resetCookie()">Profile</button>
                 </form>
               </li>
             <?php } ?>
         </ul>
     </div>
     <div class="mx-auto order-0">
-        <a class="navbar-brand mx-auto" href="feed.php">UpL!nk</a>
+        <a class="navbar-brand mx-auto" onclick="resetCookie('feed.php')">UpL!nk</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
             <span class="navbar-toggler-icon"></span>
         </button>
