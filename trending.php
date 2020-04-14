@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2a0f696f00.js" crossorigin="anonymous"></script>
+
     <title>Trending</title>
   </head>
   <body>
