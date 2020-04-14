@@ -35,7 +35,7 @@
                          <p class='card-text' onclick='getHeight()'>$textPost[$i]</p>";
 
                          if($imagePost[$i] != $userPost[$i]){//image if statement
-                           echo "<img class='card-img-top' src='img/userImages/$imagePost[$i]' alt='Card image cap'>";
+                           echo "<img class='rounded mx-auto d-block' src='img/userImages/$imagePost[$i]' alt='Card image cap'>";
                          }
 
                    echo "<a href='' class='card-link'>Date : $DatePost[$i]</a>
