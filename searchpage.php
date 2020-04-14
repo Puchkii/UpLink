@@ -13,11 +13,11 @@
     <!-- Selfmade CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    
+
     <script src="js/scroll.js"></script>
     <title>UpL!nk</title>
   </head>
-  <body>
+  <body  onhashchange="resetCookie()">
 
 
     <?php

@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="css/style.css">
     <title>UpL!nk</title>
   </head>
-  <body>
+  <body  onhashchange="resetCookie()">
+    
     <?php
       include 'inc/get.php';
       include 'inc/logout.php';

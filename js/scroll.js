@@ -16,12 +16,17 @@
 
   window.onload = setTimeout(showHeight, 50);
 
-  if ("onhashchange" in window) {
-    alert("The browser supports the hashchange event!");
+  window.onhashchange = resetCookie;
+
+  function resetCookie(){
+    document.cookie = "scroll="+0;
+    alert("test");
+    console.log("reset");
   }
 
   function showHeight(){
       window.scrollTo(0, getCookie("scroll"));
+      console.log("test");
   }
 
   function getHeight(){//set sroll height cookie

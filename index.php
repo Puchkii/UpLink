@@ -16,7 +16,7 @@
     <script src="js/scroll.js"></script>
     <title>UpL!nk</title>
   </head>
-  <body>
+  <body  onhashchange="resetCookie()">
 
     <!-- ik keek ernaar en zei mezelf tienduizend keer niet kutten met de php dus vandaar deze comment
     beter gebruik je een autoloader voor al deze files... groetjes de enige echte beste Puchkii aka Kevin -->
