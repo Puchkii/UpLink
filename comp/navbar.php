@@ -49,8 +49,11 @@
         <ul class="navbar-nav ml-auto">
             <li>
               <form class=""  method="post">
-                  <input type="text" placeholder="Zoek een leven" name="zoeken" class="rounded nav-link">
+                  <input type="text" name="zoeken" class="rounded nav-link" style='border: darkgrey; background: grey;'>
               </form>
+            </li>
+            <li>
+              <button class="nav-link btn bg-dark text-white">Zoeken</button>
             </li>
             <?php if($current){
               echo "<li class='nav-item'>

@@ -50,7 +50,9 @@
               <h2>Latest posts</h2>
               <!-- hier een back-end maken om posts in weer te geven -->
               <?php
+                  echo '<div class="overflow-auto">';
                   include 'comp/latestPost.php';
+                  echo '</div>'
                ?>
             </div>
             <div class="col-sm-4">
