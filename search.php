@@ -16,7 +16,7 @@
     <script src="js/scroll.js"></script>
     <title>UpL!nk</title>
   </head>
-  <body  onhashchange="resetCookie()">
+  <body>
     <?php
       include 'inc/get.php';
       include 'inc/logout.php';

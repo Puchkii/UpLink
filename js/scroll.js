@@ -16,12 +16,11 @@
 
   window.onload = setTimeout(showHeight, 50);
 
-  window.onhashchange = resetCookie;
-
-  function resetCookie(){
-    document.cookie = "scroll="+0;
-    alert("test");
-    console.log("reset");
+  function resetCookie(location){
+      document.cookie = "scroll="+ 0;
+      if(location){
+          window.location.assign(location)
+      }
   }
 
   function showHeight(){
