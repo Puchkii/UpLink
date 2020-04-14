@@ -15,6 +15,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/2a0f696f00.js" crossorigin="anonymous"></script>
 
+    <script src="js/scroll.js"></script>
     <title>Trending</title>
   </head>
   <body>

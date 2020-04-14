@@ -33,15 +33,18 @@
 
       if(isset($_POST['ChangePicture'])){
           if(!empty($foto)){
+              echo "test";
               $loc = "img/profileImage/";
               $IMG = "profileImage";
               UploadIMG($loc,$IMG);//foto function
               rename("img/profileImage/$foto","img/profileImage/$current$foto");
 
-              if($profileImg != $current){
-                  unlink("img/profileImage/".$profileImg);
+              if($profileImg != $current){//als er een bug is 
+                  if(empty($profileImg)){//als dit de eerste keer is dat er een profile Image word gezet
+                      unlink("img/profileImage/".$profileImg);
+                  }
               }
-              
+
               $sql = "UPDATE `users` SET `ProfileImage` = '$current$foto' WHERE username = '$current';";
               if ($conn->query($sql) === true) {}
           }

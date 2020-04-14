@@ -13,7 +13,7 @@
            <label for="exampleFormControlFile1">Upload Foto <label class="font-weight-bold">(Max 2MB)</label></label>
             <input type="file" name="fotoToUpload" id="fotoToUpload" class="form-control-file" accept="image/*"><!--max 2mb foto-->
             <br>
-           <input type="submit" class="btn btn-outline-secondary" name="Update" value="Post"><!--Post Button-->
+           <input type="submit" class="btn btn-outline-secondary" name="Update" value="Post" onclick='getHeight()'><!--Post Button-->
        </form>
     </div>
 <?php } ?>

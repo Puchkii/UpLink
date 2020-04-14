@@ -12,7 +12,7 @@
 
     <!-- Selfmade-->
     <link rel="stylesheet" href="css/style.css">
-
+    <script src="js/scroll.js"></script>
     <title>UpL!nk - Profile</title>
   </head>
   <body>
@@ -30,7 +30,7 @@
             <?php
               echo "<div class='row'>";
               if($current || $bezoek){
-                echo "<img src='img/profileImage/$profileImg' class='img-rounded' alt='profileImage'>";//kevin dit is de profile picture deze code moet je aan passen 
+                echo "<img src='img/profileImage/$profileImg' class='img-rounded' alt='profileImage'>";//kevin dit is de profile picture deze code moet je aan passen
                   echo "<h1 class='center col'>$bezoek</h1> Followers : $followingAmmount ";
                   if($bezoek != $current && $current){ //zo dat je niet je zelf kan volgen
                       if($following){

@@ -16,6 +16,10 @@
 
   window.onload = setTimeout(showHeight, 50);
 
+  if ("onhashchange" in window) {
+    alert("The browser supports the hashchange event!");
+  }
+
   function showHeight(){
       window.scrollTo(0, getCookie("scroll"));
   }
