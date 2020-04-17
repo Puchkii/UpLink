@@ -6,6 +6,9 @@
     $title = $_POST['titlePost'];
     $text = $_POST['textPost'];
     $postPost = true;
+    $unlike = $_POST['removeLike'];
+
+    $comment = mysqli_real_escape_string($conn,strip_tags($_POST['Comment']));
 
     if(isset($_POST['Update'])){
         $date = date("Y/m/d/h:i");
@@ -54,8 +57,6 @@
         reloadPost();
     }
 
-    $unlike = $_POST['removeLike'];
-
     if(isset($unlike)){
         $sql = "SELECT likers,Username FROM `post` WHERE Id = '$unlike';";
         $result = $conn->query($sql);
@@ -79,5 +80,33 @@
         }
         reloadPost();
     }
+
+    if($_POST['Post']){
+        if(!empty($comment)){
+             if(empty($commentBE)){
+                 $commentBE = [$comment,$current];
+             }else{
+                 array_push($commentBE,$comment);
+                 array_push($commentBE,$current);
+             }
+             $compressedComment = serialize($commentBE);
+
+             $sql = "UPDATE `information` SET `Comments` = '$compressedComment' WHERE User = '$bezoek';";
+             if ($conn->query($sql) === true) {}
+        }
+        reloadPost();
+    }
+
+    // if(isset($jobDEL)){//delete job
+    //     unset($jobsDB[$jobDEL]);
+    //     unset($jobsDB[$jobDEL+1]);
+    //
+    //     $compressedJobs = serialize($jobsDB);
+    //
+    //     $sql = "UPDATE `information` SET `jobs` = '$compressedJobs' WHERE User = '$current';";
+    //     if ($conn->query($sql) === true) {}
+    //   	reloadPost();
+    // }
+
 
  ?>

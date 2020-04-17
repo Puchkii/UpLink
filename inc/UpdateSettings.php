@@ -10,9 +10,6 @@
 
   $aboutMe = mysqli_real_escape_string($conn,strip_tags($_POST['aboutme']));//about me update
 
-  $jobs = mysqli_real_escape_string($conn,strip_tags($_POST['jobTitle']));
-  $jobInfo = mysqli_real_escape_string($conn,strip_tags($_POST['jobInfo']));
-
   $reg1 = "/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/i";//wachtwoord check.
 
   $jobDEL = $_POST['deleteJob'];
@@ -58,34 +55,6 @@
           }
           reloadPost();
       }
-      //jobs
-      //moet gebruikt worden voor de comments
-      // if($_POST['AddJob']){
-      //     if(!empty($jobs)){
-      //          if(empty($jobsDB)){
-      //              $jobsDB = [$jobs,$jobInfo];
-      //          }else{
-      //              array_push($jobsDB,$jobs);
-      //              array_push($jobsDB,$jobInfo);
-      //          }
-      //          $compressedJobs = serialize($jobsDB);
-      //
-      //          $sql = "UPDATE `information` SET `jobs` = '$compressedJobs' WHERE User = '$current';";
-      //          if ($conn->query($sql) === true) {}
-      //     }
-      //     reloadPost();
-      // }
-      //
-      // if(isset($jobDEL)){//delete job
-      //     unset($jobsDB[$jobDEL]);
-      //     unset($jobsDB[$jobDEL+1]);
-      //
-      //     $compressedJobs = serialize($jobsDB);
-      //
-      //     $sql = "UPDATE `information` SET `jobs` = '$compressedJobs' WHERE User = '$current';";
-      //     if ($conn->query($sql) === true) {}
-      //   	reloadPost();
-      // }
   }
 
 

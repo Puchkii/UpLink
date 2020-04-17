@@ -34,7 +34,7 @@
        if(in_array($bezoek,$followingProfile)){
           $following = true;
        }
-       $sql = "SELECT created_at,following,followers FROM `users` WHERE username = '$bezoek';";
+       $sql = "SELECT created_at,following,followers,ProfileImage FROM `users` WHERE username = '$bezoek';";
        $result = $conn->query($sql);
        if ($result->num_rows > 0) {
           while($row = $result->fetch_assoc()) {
@@ -42,15 +42,16 @@
               $followingProfileBE = unserialize($row['following']);
               $followersProfileBE = unserialize($row['followers']);
               $followingAmmount = Count($followersProfileBE);
+              $profileImgBE = $row['ProfileImage'];
           }
       }
 
-      $sql = "SELECT About,jobs FROM `information` WHERE User = '$bezoek';";
+      $sql = "SELECT About,Comments FROM `information` WHERE User = '$bezoek';";
       $result = $conn->query($sql);
       if ($result->num_rows > 0) {
          while($row = $result->fetch_assoc()) {
              $aboutBE = $row['About'];
-             $jobsBE = unserialize($row['jobs']);
+             $commentBE = unserialize($row['Comments']);
          }
       }
 
