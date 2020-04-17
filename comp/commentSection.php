@@ -4,7 +4,7 @@
   <?php if($current){ ?><!--Als je bent ingelogt-->
     <form class="" action="" method="post">
       <textarea name="Comment" rows="8" cols="80"></textarea>
-      <input type="Submit" name="Post" value="Post"><!--Een submit icoon moet er komen---->
+      <input type="Submit" name="Post" value="Post" onclick='getHeight()'><!--Een submit icoon moet er komen---->
     </form>
   <?php } ?>
 <hr>
