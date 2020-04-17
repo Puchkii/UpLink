@@ -31,20 +31,3 @@
   </form>
 
 <br>
-<hr>
-  <h3>Jobs:<h3>
-  <form class="" method="post">
-    <input type="text" name="jobTitle" class="rounded" value="" placeholder="Wat was jou functie?"><br><br>
-    <textarea name="jobInfo" rows="8" class="rounded" placeholder="Vertel wat over wat jij daar betekent voor het bedrijf" cols="80"></textarea><br>
-    <input type="submit" name="AddJob" value="Add" class="btn btn-outline-secondary" onclick='getHeight()'>
-  </form>
-</div>
-<form class=""  method="post">
-  <?php
-      for($i=0; $i < count($jobsDB)/2; $i++){
-          echo $jobsDB[$i]."<br>".$jobsDB[$i+1]."<br><button class='' name='deleteJob' value='$i'>-</button>";
-      }
-   ?>
-</form>
-
-<!--Een lijst van job titles die je kan veranderen en verweideren moet hier nog komen-->

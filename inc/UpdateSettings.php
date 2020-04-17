@@ -39,7 +39,7 @@
               UploadIMG($loc,$IMG);//foto function
               rename("img/profileImage/$foto","img/profileImage/$current$foto");
 
-              if($profileImg != $current){//als er een bug is 
+              if($profileImg != $current){//als er een bug is
                   if(empty($profileImg)){//als dit de eerste keer is dat er een profile Image word gezet
                       unlink("img/profileImage/".$profileImg);
                   }
@@ -59,32 +59,33 @@
           reloadPost();
       }
       //jobs
-      if($_POST['AddJob']){
-          if(!empty($jobs)){
-               if(empty($jobsDB)){
-                   $jobsDB = [$jobs,$jobInfo];
-               }else{
-                   array_push($jobsDB,$jobs);
-                   array_push($jobsDB,$jobInfo);
-               }
-               $compressedJobs = serialize($jobsDB);
-
-               $sql = "UPDATE `information` SET `jobs` = '$compressedJobs' WHERE User = '$current';";
-               if ($conn->query($sql) === true) {}
-          }
-          reloadPost();
-      }
-
-      if(isset($jobDEL)){//delete job
-          unset($jobsDB[$jobDEL]);
-          unset($jobsDB[$jobDEL+1]);
-
-          $compressedJobs = serialize($jobsDB);
-
-          $sql = "UPDATE `information` SET `jobs` = '$compressedJobs' WHERE User = '$current';";
-          if ($conn->query($sql) === true) {}
-        	reloadPost();
-      }
+      //moet gebruikt worden voor de comments
+      // if($_POST['AddJob']){
+      //     if(!empty($jobs)){
+      //          if(empty($jobsDB)){
+      //              $jobsDB = [$jobs,$jobInfo];
+      //          }else{
+      //              array_push($jobsDB,$jobs);
+      //              array_push($jobsDB,$jobInfo);
+      //          }
+      //          $compressedJobs = serialize($jobsDB);
+      //
+      //          $sql = "UPDATE `information` SET `jobs` = '$compressedJobs' WHERE User = '$current';";
+      //          if ($conn->query($sql) === true) {}
+      //     }
+      //     reloadPost();
+      // }
+      //
+      // if(isset($jobDEL)){//delete job
+      //     unset($jobsDB[$jobDEL]);
+      //     unset($jobsDB[$jobDEL+1]);
+      //
+      //     $compressedJobs = serialize($jobsDB);
+      //
+      //     $sql = "UPDATE `information` SET `jobs` = '$compressedJobs' WHERE User = '$current';";
+      //     if ($conn->query($sql) === true) {}
+      //   	reloadPost();
+      // }
   }
 
 
