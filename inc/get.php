@@ -22,12 +22,11 @@
          }
      }
 
-     $sql = "SELECT About,jobs FROM `information` WHERE User = '$current';";
+     $sql = "SELECT About FROM `information` WHERE User = '$current';";
      $result = $conn->query($sql);
      if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             $aboutDB = $row['About'];
-            $jobsDB = unserialize($row['jobs']);
         }
      }
 
