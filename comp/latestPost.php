@@ -38,12 +38,12 @@
         if($bezoek != $current && $current){
             if(!in_array($current,$likeArray)){//like button kan je mischien nog veranderen naar een plusje of een hartje ofzo
                 echo "<form method='post' class=''>
-                        <button type='submit' name='like' value='$idPost[$i]'>Like</button>
-                      </form>";
+                <button type='submit' class='btn btn-outline-secondary' name='like' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: red;' class='fas fa-heart'></i></button>
+              </form>";
             }else{//een remove like button
               echo "<form method='post' class=''>
-                      <button type='submit' name='removeLike' value='$idPost[$i]'>Remove Like</button>
-                    </form>";
+              <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: black' class='far fa-heart'></i></button>
+            </form>";
             }
         }
         echo "</div><br>";
