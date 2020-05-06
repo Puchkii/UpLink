@@ -25,6 +25,7 @@
       include 'inc/logout.php';
       include 'comp/navbar.php';
       include 'inc/post.php';
+      include 'inc/commentSection.php';
       include 'inc/follow.php';
       // include 'comp/footer.php';
     ?>

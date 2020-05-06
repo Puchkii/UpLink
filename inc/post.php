@@ -80,33 +80,4 @@
         }
         reloadPost();
     }
-
-    if($_POST['Post']){
-        if(!empty($comment)){
-             if(empty($commentBE)){
-                 $commentBE = [$comment,$current];
-             }else{
-                 array_push($commentBE,$comment);
-                 array_push($commentBE,$current);
-             }
-             $compressedComment = serialize($commentBE);
-
-             $sql = "UPDATE `information` SET `Comments` = '$compressedComment' WHERE User = '$bezoek';";
-             if ($conn->query($sql) === true) {}
-        }
-        reloadPost();
-    }
-
-    // if(isset($jobDEL)){//delete job
-    //     unset($jobsDB[$jobDEL]);
-    //     unset($jobsDB[$jobDEL+1]);
-    //
-    //     $compressedJobs = serialize($jobsDB);
-    //
-    //     $sql = "UPDATE `information` SET `jobs` = '$compressedJobs' WHERE User = '$current';";
-    //     if ($conn->query($sql) === true) {}
-    //   	reloadPost();
-    // }
-
-
  ?>
