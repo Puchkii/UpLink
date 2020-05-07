@@ -17,3 +17,5 @@
         }
     }
  ?>
+ 
+<a href="allFollowers.php">More followers</a>
