@@ -21,6 +21,7 @@
   <body>
 
     <?php
+      //deze includes pages kunnen allemaal in een index met een get systeem. weet nog niet of ik dat ook nog ga toevoegen 
       include 'inc/get.php';
       include 'inc/logout.php';
       include 'comp/navbar.php';
