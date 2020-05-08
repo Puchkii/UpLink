@@ -11,6 +11,11 @@
           <input type="password" class="form-control" placeholder="Enter password" name="password">
         </div>
       </div>
+      <?php
+          if($_SESSION['wachtwoordCheck'] == "true"){
+              echo "<div class='alert alert-danger m-4' role='alert'>Failed to login</div>";
+          }
+      ?>
       <br>
       <button type="submit" name="login" class="btn btn-outline-secondary">Log in</button>
     </form>

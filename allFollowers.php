@@ -22,14 +22,16 @@
       include 'inc/logout.php';
       include 'inc/bezoek.php';
       include 'comp/navbar.php';
-      include 'comp/footer.php';
     ?>
+    <h1 class="text-center m-5">Followers</h1>
 
-    <form class="" method="post">
+    <form class="m-5" method="post">
       <?php include 'comp/moreFollowers.php'; ?>
     </form>
 
-
+    <?php
+      include 'comp/footer.php';
+     ?>
     <!-- Selfmade JS -->
     <script src="js/CookieNotifier.js"></script>
 

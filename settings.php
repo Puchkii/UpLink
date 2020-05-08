@@ -24,8 +24,12 @@
       include 'inc/UpdateSettings.php';
       include 'inc/logout.php';
       include 'comp/navbar.php';
-      include 'comp/settings.php';
+    ?>
 
+    <h1 class="text-center m-5">Trending</h1>
+
+    <?php
+      include 'comp/settings.php';
     ?>
 
     <!-- Selfmade JS -->

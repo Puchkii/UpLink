@@ -14,10 +14,11 @@
 
               if($password == $passwordCheck){
                   $_SESSION['current'] = $username;
+                  $_SESSION['wachtwoordCheck'] = "false";
                   header('Location: index.php');
               }
               else{
-                  $_SESSION['wachtwoordCheck'] = "false";//voor de fout melding
+                  $_SESSION['wachtwoordCheck'] = "true";//voor de fout melding
               }
            }
        }
