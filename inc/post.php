@@ -7,6 +7,7 @@
     $text = $_POST['textPost'];
     $postPost = true;
     $unlike = $_POST['removeLike'];
+    $delete = $_POST['removePost'];
 
     $comment = mysqli_real_escape_string($conn,strip_tags($_POST['Comment']));
 
@@ -24,6 +25,24 @@
                     UploadIMG($loc,$IMG);//foto function
                     rename("img/userImages/$foto","img/userImages/$current$foto");
                 }
+            }
+        }
+        reloadPost();
+    }
+
+    if(isset($delete))
+    {
+        $sql = "SELECT Username FROM `post` WHERE id = '$delete' ORDER BY `DatePost`;";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+           while($row = $result->fetch_assoc()) {
+               $userPostDel = $row['Username'];
+           }
+        }
+        if($userPostDel == $current){
+            $sql = "DELETE FROM `post` WHERE `Id` = '$delete';";
+            if ($conn->query($sql) === true){
+                unlink("img/userImages/".$imagePost);
             }
         }
         reloadPost();

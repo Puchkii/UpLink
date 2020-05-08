@@ -27,6 +27,7 @@
       include 'comp/navbar.php';
       ?>
     <br>
+    <h1 class="text-center m-5">Trending</h1>
     <div class="container">
       <?php
         include 'comp/showTrending.php';

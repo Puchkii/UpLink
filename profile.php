@@ -21,46 +21,28 @@
   <body>
 
     <?php
-      //deze includes pages kunnen allemaal in een index met een get systeem. weet nog niet of ik dat ook nog ga toevoegen 
+      //deze includes pages kunnen allemaal in een index met een get systeem. weet nog niet of ik dat ook nog ga toevoegen
       include 'inc/get.php';
       include 'inc/logout.php';
       include 'comp/navbar.php';
       include 'inc/post.php';
       include 'inc/commentSection.php';
       include 'inc/follow.php';
-      // include 'comp/footer.php';
     ?>
       <div class="container">
-        <form class="" method="post">
-            <?php
-              echo "<div class='row'>";
-              if($current || $bezoek){
-                  if($profileImgBE != $bezoek){
-                      echo "<img src='img/profileImage/$profileImgBE' class='img-rounded' alt='profileImage'>";//kevin dit is de profile picture deze code moet je aan passen
-                  }
-                  echo "<h1 class='center col'>$bezoek</h1> Followers : $followingAmmount";
-                  if($bezoek != $current && $current){ //zo dat je niet je zelf kan volgen
-                      if($following){
-                          echo "<button type='submit' name='unfollow' class='btn btn-outline-secondary'>Unfollow</button>";
-                      }else{
-                          echo "<button type='submit' name='follow' class='btn btn-outline-secondary'>Follow</button>";
-                      }
-                  }
-              }
-              echo "</div>";
-            ?>
-         </form>
+        <?php
+          include 'comp\topProfile.php';
+        ?>
         <hr class="my-4">
           <?php include 'comp/post.php'; ?>
           <div class="row">
             <div class="col-sm-8">
               <h2>Latest posts</h2>
-              <!-- hier een back-end maken om posts in weer te geven -->
-              <?php
-                  echo '<div class="overflow-auto">';
-                  include 'comp/latestPost.php';
-                  echo '</div>'
-               ?>
+              <div class="overflow-auto">
+                <?php
+                    include 'comp/latestPost.php';
+                 ?>
+              </div>
             </div>
             <div class="col-sm-4">
               <h2>Followers</h2>
