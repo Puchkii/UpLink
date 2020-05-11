@@ -20,9 +20,11 @@
                }
 
                echo "<div class='card' style='width: 18rem;'>
-                      $followingProfile[$i]
-                      <img src='img/profileImage/$profileFOL' class='card-img-top' alt='Profile Image'>
-                      <div class='card-body'>
+                      $followingProfile[$i]";
+              if($profileFOL != $followingProfile[$i]){//als er een profile image is
+                  echo "<img src='img/profileImage/$profileFOL' class='card-img-top' alt='Profile Image'>";
+              }
+                echo "<div class='card-body'>
                         <h5 class='card-title'>$aboutFOL</h5>
                         <button typ='submit' value='$i' class='btn btn-outline-secondary' name='unfollow'>Unfollow</button>
                       </div>

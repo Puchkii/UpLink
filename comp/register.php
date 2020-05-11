@@ -22,4 +22,10 @@
       <button type="submit" name="register" value="Submit" class="btn btn-outline-secondary">Register now</button>
   </div>
   </form>
-</div>
+</div><br>
+<?php
+  if(!$_SESSION['fout']){
+    $melding = $_SESSION['fouten'];
+    echo "<div class='alert alert-danger m-4' role='alert'><h2>Failed to register Becouse : </h2><h5> $melding</h5></div>";
+  }
+?>

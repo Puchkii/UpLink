@@ -41,9 +41,14 @@
               $createdDBBE = $row['created_at'];
               $followingProfileBE = unserialize($row['following']);
               $followersProfileBE = unserialize($row['followers']);
-              $followingAmmount = Count($followersProfileBE);
               $profileImgBE = $row['ProfileImage'];
           }
+      }
+
+      if(empty($followersProfileBE)){
+          $followingAmmount = 0;
+      }else{
+          $followingAmmount = Count($followersProfileBE);
       }
 
       $sql = "SELECT About,Comments FROM `information` WHERE User = '$bezoek';";
