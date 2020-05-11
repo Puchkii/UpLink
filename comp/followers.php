@@ -18,4 +18,4 @@
     }
  ?>
  
-<a href="allFollowers.php">More followers</a>
+<a href="allFollowers.php" class="btn btn-outline-secondary">View more</a>
