@@ -33,6 +33,7 @@
         <?php
           include 'comp\topProfile.php';
         ?>
+        <img src="..." alt="..." class="img-thumbnail">
         <hr class="my-4">
           <?php include 'comp/post.php'; ?>
           <div class="row">

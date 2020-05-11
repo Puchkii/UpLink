@@ -17,7 +17,19 @@
                   <p class='card-text'>$commentBE[$i]</p>
                   <form method='post' class=''>";
         if($bezoek == $current){//als de comment van de ingelogte is
+
+          // trash it
           echo "<button type='submite' class='btn btn-secondary' value='$i' name='removeComment'><i class='far fa-trash-alt'></i></button>";
+          
+          // add like
+          echo "<form method='post' class=''>
+                  <button type='submit' class='btn btn-outline-secondary' name='like' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: red;' class='fas fa-heart'></i></button>
+                </form>";
+          // remove like
+          echo "<form method='post' class=''>
+                  <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: black' class='far fa-heart'></i></button>
+                </form>";
+
         }
         echo "    </form>
                 </div>
