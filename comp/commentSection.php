@@ -9,30 +9,20 @@
   <?php } ?>
 <hr><br>
 <?php
-    for($i=0; $i < count($commentBE); $i+=2){
-        $user = $commentBE[$i+1];
-        echo "<div class='card' style='width: 18rem;'>
-                <div class='card-body'>
-                  <h2 class='card-text'>$user</h2>
-                  <p class='card-text'>$commentBE[$i]</p>
-                  <form method='post' class=''>";
-        if($bezoek == $current){//als de comment van de ingelogte is
-
-          // trash it
-          echo "<button type='submite' class='btn btn-secondary' value='$i' name='removeComment'><i class='far fa-trash-alt'></i></button>";
-          
-          // add like
-          echo "<form method='post' class=''>
-                  <button type='submit' class='btn btn-outline-secondary' name='like' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: red;' class='fas fa-heart'></i></button>
-                </form>";
-          // remove like
-          echo "<form method='post' class=''>
-                  <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: black' class='far fa-heart'></i></button>
-                </form>";
-
+    if(!empty($followersProfileBE)){
+        for($i=0; $i < count($commentBE); $i+=2){
+            $user = $commentBE[$i+1];
+            echo "<div class='card' style='width: 18rem;'>
+                    <div class='card-body'>
+                      <h2 class='card-text'>$user</h2>
+                      <p class='card-text'>$commentBE[$i]</p>
+                      <form method='post' class=''>";
+            if($bezoek == $current){//als de comment van de ingelogte is
+                echo "<button type='submite' class='btn btn-secondary' value='$i' name='removeComment'><i class='far fa-trash-alt'></i></button>";
+            }
+            echo "    </form>
+                    </div>
+                  </div><br>";
         }
-        echo "    </form>
-                </div>
-              </div><br>";
     }
 ?>
