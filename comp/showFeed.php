@@ -21,7 +21,7 @@
                $DatePost[$t] = $row['DatePost'];
                $userPost[$t] = $row['Username'];
                $likeArray[$t] = unserialize($row['likers']);
-               $likes[$t] = Count(unserialize($row['likers']));
+               $likes[$t] = Count($likeArray[$t]);
                $t++;
            }
         }
@@ -33,20 +33,17 @@
                          <h5 class='card-title'>$titlePost[$i]</h5>
                          <h6 class='card-subtitle mb-2 text-muted'>$userPost[$i]</h6>
                          <p class='card-text' onclick='getHeight()'>$textPost[$i]</p>";
-
-                         if($imagePost[$i] != $userPost[$i]){//image if statement
-                           echo "<img class='rounded mx-auto d-block' src='img/userImages/$imagePost[$i]' alt='Card image cap'>";
-                         }
-
-                   echo "<a href='' class='card-link'>Date : $DatePost[$i]</a>
-                         <a href='' class='card-link'>Likes : $likes[$i]</a>";
+            if($imagePost[$i] != $userPost[$i]){//image if statement
+               echo "<img class='rounded mx-auto d-block' src='img/userImages/$imagePost[$i]' alt='Card image cap'>";
+            }
+            echo "<p class='card-link'>Date : $DatePost[$i]<br> Likes : $likes[$i]</p>";
             if(!in_array($current,$likeArray[$i]) && $current){//like button
                 echo "<form method='post' class=''>
-                        <button type='submit' class='btn btn-outline-secondary' name='like' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: red;' class='fas fa-heart'></i></button>
+                        <button type='submit' class='btn btn-outline-secondary' name='like' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: black' class='far fa-heart'></i></button>
                       </form>";
             }else{//een remove like button
                 echo "<form method='post' class=''>
-                        <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: black' class='far fa-heart'></i></button>
+                        <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: red;' class='fas fa-heart'></i></button>
                       </form>";
             }
             echo "</div></div></div><br>";//afsluiting divs

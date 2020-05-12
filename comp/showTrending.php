@@ -20,38 +20,29 @@
         if ($result->num_rows > 0) {
            while($row = $result->fetch_assoc()) {
                $likeArray = unserialize($row['likers']);
+               $likes = Count($likeArray);
            }
         }
 
-        if(empty($likeArray)){
-            $aantal = 0;
-        }else{
-            $aantal = count($likeArray);
+        echo "<div class='row'>
+                <div class='card col' style='width: 18rem;'>
+                  <div class='card-body'>
+                     <h5 class='card-title'>$titlePost[$i]</h5>
+                     <h6 class='card-subtitle mb-2 text-muted'>$userPost[$i]</h6>
+                     <p class='card-text' onclick='getHeight()'>$textPost[$i]</p>";
+        if($imagePost[$i] != $userPost[$i]){//image if statement
+           echo "<img class='rounded mx-auto d-block' src='img/userImages/$imagePost[$i]' alt='Card image cap'>";
         }
-
-        /*Kevin hier worden de trending post uitgeprint. dus hier moet je de style aanpassen */
-        
-        echo " <div class='card'>";
-        if($imagePost[$i] != $userPost[$i]){//checkt als er een image in de post zit
-            echo "<br><img class='rounded mx-auto' src='img/userImages/$imagePost[$i]' style='width:60%;' alt='post image'><br>";//image
+        echo "<p class='card-link'>Date : $DatePost[$i]<br> Likes : $likes</p>";
+        if(!in_array($current,$likeArray) && $current){//like button
+            echo "<form method='post' class=''>
+                    <button type='submit' class='btn btn-outline-secondary' name='like' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: black' class='far fa-heart'></i></button>
+                  </form>";
+        }else{//een remove like button
+            echo "<form method='post' class=''>
+                    <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: red;' class='fas fa-heart'></i></button>
+                  </form>";
         }
-        echo "<div class='card-body'>
-                 <div class='card-header'>
-                    $titlePost[$i]
-                  </div>
-                  <p class='card-text'>$textPost[$i]</p>
-             </div>";
-        if($userPost[$i] != $current && $current){
-            if(!in_array($current,$likeArray)){//like button kan je mischien nog veranderen naar een plusje of een hartje ofzo
-                echo "<form method='post' class=''>
-                        <button type='submit' class='btn btn-outline-secondary' name='like' onclick='getHeight()' value='$idPost[$i]'><i style='border: none; color: red;' class='fas fa-heart'></i></button>
-                      </form>";
-            }else{//een remove like button
-                echo "<form method='post' class=''>
-                        <button type='submit' class='btn btn-outline-secondary' name='removeLike' onclick='getHeight()' value='$idPost[$i]'><i style='border: none; color: black' class='far fa-heart'></i></button>
-                      </form>";
-            }
-        }
-        echo "</div><br>";
+        echo "</div></div></div><br>";//afsluiting divs
     }
  ?>
