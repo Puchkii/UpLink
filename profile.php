@@ -16,6 +16,9 @@
     <!-- Selfmade-->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/scroll.js"></script>
+    <!-- css profile img -->
+    <link rel="stylesheet" href="css/profile-img.css">
+
     <title>UpL!nk - Profile</title>
   </head>
   <body>
@@ -33,7 +36,17 @@
         <?php
           include 'comp\topProfile.php';
         ?>
-        <img src="img/profileImage/DylanspinRoom.jpg" alt="..." class="img-thumbnail"><!--Kevin ik heb er een tijdelijke image in gezet zo dat je het kan fixen -->
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="img/profileImage/DylanspinRoom.jpg" alt="..." class="img-thumbnail"><!--Kevin ik heb er een tijdelijke image in gezet zo dat je het kan fixen -->
+          </div>
+          <div class="col-sm-4">
+            <p>Profiel naam hier</p>
+          </div>
+          <div class="col-sm-4">
+            <p>Profiel bio/info</p>
+          </div>
+        </div>      
         <hr class="my-4">
           <?php include 'comp/post.php'; ?>
           <div class="row">

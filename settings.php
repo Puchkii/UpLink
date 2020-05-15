@@ -26,7 +26,7 @@
       include 'comp/navbar.php';
     ?>
 
-    <h1 class="text-center m-5">Trending</h1>
+    <h1 class="text-center m-5">Settings</h1>
 
     <?php
       include 'comp/settings.php';

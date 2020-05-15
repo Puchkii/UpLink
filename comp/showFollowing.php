@@ -18,9 +18,7 @@
                       $aboutFOL = $row['About'];
                   }
                }
-               echo "<div class='row row-cols-1 row-cols-md-3'>";
-               echo "<div class='col mb-4'>";
-               echo "<div class='card' style='width: 18rem;'>
+               echo "<div class='row'><div class='col-sm-4'><div class='card' style='width: 18rem;'>
                       $followingProfile[$i]";
               if($profileFOL != $followingProfile[$i]){//als er een profile image is
                   echo "<img src='img/profileImage/$profileFOL' class='card-img-top' alt='Profile Image'>";
@@ -28,10 +26,7 @@
                 echo "<div class='card-body'>
                         <h5 class='card-title'>$aboutFOL</h5>
                         <button typ='submit' value='$i' class='btn btn-outline-secondary' name='unfollow'>Unfollow</button>
-                      </div>
-                      </div>
-                      </div>
-                    </div><br>";
+                      </div></div></div></div><br>";
             }
         }
      ?>

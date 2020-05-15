@@ -52,9 +52,6 @@
                   <input type="text" name="zoeken" class="rounded nav-link" style='border: darkgrey; background: grey;'>
               </form>
             </li>
-            <li>
-              <button class="nav-link btn bg-dark text-white">Zoeken</button>
-            </li>
             <?php if($current){
               echo "<li class='nav-item'>
                       <form method='post'>
