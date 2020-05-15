@@ -49,7 +49,7 @@
         <ul class="navbar-nav ml-auto">
             <li>
               <form class=""  method="post">
-                  <input type="text" name="zoeken" class="rounded nav-link" style='border: darkgrey; background: grey;'>
+                  <input type="text" name="zoeken" class="rounded nav-link form-control" placeholder='Zoekopdracht invoeren' style='border: darkgrey; background: grey; color: white; opacity: 1;'>
               </form>
             </li>
             <li>
