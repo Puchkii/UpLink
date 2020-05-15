@@ -47,14 +47,10 @@
     </div>
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
-            <li>
-              <form class=""  method="post">
-                  <input type="text" name="zoeken" class="rounded nav-link form-control" placeholder='Zoekopdracht invoeren' style='border: darkgrey; background: grey; color: white; opacity: 1;'>
-              </form>
-            </li>
-            <li>
-              <button class="nav-link btn bg-dark text-white">Zoeken</button>
-            </li>
+          <form class=""  method="post">
+              <input type="text" name="zoeken" class="rounded nav-link" style='border: darkgrey; background: grey;'>
+              <button class="nav-link btn bg-dark text-white"  style='display: inline-block;'>Zoeken</button>
+          </form>
             <?php if($current){
               echo "<li class='nav-item'>
                       <form method='post'>

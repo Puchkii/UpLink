@@ -3,7 +3,7 @@
       echo "<div class='row'>";
       if($current || $bezoek){
           if($profileImgBE != $bezoek){
-              echo "<img src='img/profileImage/$profileImgBE' class='img-rounded' alt='profileImage'>";//kevin dit is de profile picture deze code moet je aan passen
+              echo "<img src='img/profileImage/$profileImgBE' class='img-rounded img-thumbnail' alt='profileImage'>";//kevin dit is de profile picture deze code moet je aan passen
           }
           echo "<h1 class='center col m-4 '>$bezoek</h1> <h2 class='m-4'>Followers : $followingAmmount</h2>";
           if($bezoek != $current && $current){ //zo dat je niet je zelf kan volgen

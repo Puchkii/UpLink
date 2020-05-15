@@ -33,7 +33,7 @@
         <?php
           include 'comp\topProfile.php';
         ?>
-        <img src="..." alt="..." class="img-thumbnail">
+        <img src="img/profileImage/DylanspinRoom.jpg" alt="..." class="img-thumbnail"><!--Kevin ik heb er een tijdelijke image in gezet zo dat je het kan fixen -->
         <hr class="my-4">
           <?php include 'comp/post.php'; ?>
           <div class="row">
