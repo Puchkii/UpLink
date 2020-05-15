@@ -36,6 +36,7 @@
         <?php
           include 'comp\topProfile.php';
         ?>
+        <h1 class="text-center m-5">Profile</h1>
         <div class="row">
           <div class="col-sm-4">
             <img src="img/profileImage/DylanspinRoom.jpg" alt="..." class="img-thumbnail"><!--Kevin ik heb er een tijdelijke image in gezet zo dat je het kan fixen -->
@@ -48,11 +49,12 @@
           </div>
         </div>      
         <hr class="my-4">
+          <h2 class="text-center m-5">Whats on your mind?</h2>
           <?php include 'comp/post.php'; ?>
           <div class="row">
             <div class="col-sm-8">
               <h2>Latest posts</h2>
-              <div class="overflow-auto">
+              <div style="max-height: 400px; max-width: 350px; overflow: scroll;">
                 <?php
                     include 'comp/latestPost.php';
                  ?>

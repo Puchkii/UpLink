@@ -8,6 +8,7 @@
     </form>
   <?php } ?>
 <hr><br>
+<div style="max-height: 500px; max-width: 700px; overflow: scroll;">
 <?php
     if(!empty($followersProfileBE)){
         for($i=0; $i < count($commentBE); $i+=2){
@@ -26,3 +27,4 @@
         }
     }
 ?>
+</div>
