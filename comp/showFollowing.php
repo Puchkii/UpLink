@@ -1,7 +1,7 @@
 
 <form class="" method="post">
     <?php
-        for($i=0; $i<=6; $i++){
+        for($i=0; $i<=Count($followingProfile)+1; $i++){
             if(!empty($followingProfile[$i])){
                $sql = "SELECT ProfileImage FROM `users` WHERE username = '$followingProfile[$i]';";
                $result = $conn->query($sql);
