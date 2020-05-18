@@ -15,7 +15,7 @@
               if($password == $passwordCheck){
                   $_SESSION['current'] = $username;
                   $_SESSION['wachtwoordCheck'] = "false";
-                  header('Location: index.php');
+                  header('Location: feed.php');
               }
               else{
                   $_SESSION['wachtwoordCheck'] = "true";//voor de fout melding

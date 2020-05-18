@@ -34,14 +34,16 @@
            echo "<img class='rounded mx-auto d-block' src='img/userImages/$imagePost[$i]' alt='Card image cap'>";
         }
         echo "<p class='card-link'>Date : $DatePost[$i]<br> Likes : $likes</p>";
-        if(!in_array($current,$likeArray) && $current){//like button
-            echo "<form method='post' class=''>
-                    <button type='submit' class='btn btn-outline-secondary' name='like' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: black' class='far fa-heart'></i></button>
-                  </form>";
-        }else{//een remove like button
-            echo "<form method='post' class=''>
-                    <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: red;' class='fas fa-heart'></i></button>
-                  </form>";
+        if($current && $current != $userPost[$i]){//zo dat je niet je eigen post kan liken 
+            if(!in_array($current,$likeArray) && $current){//like button
+                echo "<form method='post' class=''>
+                        <button type='submit' class='btn btn-outline-secondary' name='like' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: black' class='far fa-heart'></i></button>
+                      </form>";
+            }else{//een remove like button
+                echo "<form method='post' class=''>
+                        <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: red;' class='fas fa-heart'></i></button>
+                      </form>";
+            }
         }
         echo "</div></div></div><br>";//afsluiting divs
     }
