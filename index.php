@@ -10,32 +10,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!-- Selfmade-->
-    <!-- <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css"> -->
-    <script src="js/scroll.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2a0f696f00.js" crossorigin="anonymous"></script>
+
+    <!-- Selfmade CSS -->
+    <link rel="stylesheet" href="css/style.css">
     <title>UpL!nk</title>
   </head>
   <body>
 
-    <!-- ik keek ernaar en zei mezelf tienduizend keer niet kutten met de php dus vandaar deze comment
-    beter gebruik je een autoloader voor al deze files... groetjes de enige echte beste Puchkii aka Kevin -->
-
-    <!--Ik denk niet dat dat gaat werken om niet alle pagina's hebben de zelfde includes maar kijk er nog wel eve naar later
-    weet niet precies hoe een autoloader ook all werkt-->
     <?php
       include 'inc/get.php';
       include 'inc/logout.php';
+      include 'inc/post.php';
       include 'comp/navbar.php';
-      include 'comp/intro.php';
-      include 'comp/main.php';
-      include 'comp/section.php';
-      include 'comp/footer.php';
-      ?>
+    ?>
+    
+    <h1 class="text-center m-5">Feed</h1>
+    <div class="container">
+      <?php include 'comp/showFeed.php'; ?>
+    </div>
 
     <!-- Selfmade JS -->
     <script src="js/CookieNotifier.js"></script>
-
+    <script src="js/scroll.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
