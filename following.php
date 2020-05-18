@@ -24,6 +24,7 @@
       ?>
 
     <div class="container"><br>
+      <h2 style='text-align:center'>Followers</h2><br>
     <?php
       include 'comp/showFollowing.php';
     ?>

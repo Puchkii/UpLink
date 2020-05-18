@@ -17,5 +17,5 @@
         }
     }
  ?>
- 
-<a href="allFollowers.php" class="btn btn-outline-secondary">View more</a>
+
+<a href="allFollowers.php" class="">View more</a>

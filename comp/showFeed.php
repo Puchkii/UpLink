@@ -25,30 +25,35 @@
                $t++;
            }
         }
-
-        for($i=0; $i<=$t-1; $i++){
-            echo "<div class='row'>
-                    <div class='card col' style='width: 18rem;'>
-                      <div class='card-body'>
-                         <h5 class='card-title'>$titlePost[$i]</h5>
-                         <h6 class='card-subtitle mb-2 text-muted'>$userPost[$i]</h6>
-                         <p class='card-text' onclick='getHeight()'>$textPost[$i]</p>";
-            if($imagePost[$i] != $userPost[$i]){//image if statement
-               echo "<img class='rounded mx-auto d-block' src='img/userImages/$imagePost[$i]' alt='Card image cap'>";
+        if($t != 0){
+            for($i=0; $i<=$t-1; $i++){
+                echo "<div class='row'>
+                        <div class='card col' style='width: 18rem;'>
+                          <div class='card-body'>
+                             <h5 class='card-title'>$titlePost[$i]</h5>
+                             <h6 class='card-subtitle mb-2 text-muted'>$userPost[$i]</h6>
+                             <p class='card-text' onclick='getHeight()'>$textPost[$i]</p>";
+                if($imagePost[$i] != $userPost[$i]){//image if statement
+                   echo "<img class='rounded mx-auto d-block' src='img/userImages/$imagePost[$i]' alt='Card image cap'>";
+                }
+                echo "<p class='card-link'>Date : $DatePost[$i]<br> Likes : $likes[$i]</p>";
+                if($current && $current != $userPost[$i]){
+                    if(!in_array($current,$likeArray[$i])){//like button
+                        echo "<form method='post' class=''>
+                                <button type='submit' class='btn btn-outline-secondary' name='like' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: black' class='far fa-heart'></i></button>
+                              </form>";
+                    }else{//een remove like button
+                        echo "<form method='post' class=''>
+                                <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: red;' class='fas fa-heart'></i></button>
+                              </form>";
+                    }
+                }
+                echo "</div></div></div><br>";//afsluiting divs
             }
-            echo "<p class='card-link'>Date : $DatePost[$i]<br> Likes : $likes[$i]</p>";
-            if(!in_array($current,$likeArray[$i]) && $current){//like button
-                echo "<form method='post' class=''>
-                        <button type='submit' class='btn btn-outline-secondary' name='like' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: black' class='far fa-heart'></i></button>
-                      </form>";
-            }else{//een remove like button
-                echo "<form method='post' class=''>
-                        <button type='submit' class='btn btn-outline-secondary' name='removeLike' value='$idPost[$i]' onclick='getHeight()'><i style='border: none; color: red;' class='fas fa-heart'></i></button>
-                      </form>";
-            }
-            echo "</div></div></div><br>";//afsluiting divs
+        }else{
+            echo "<h1 style='text-align: center;'>No post yet</h1>";
         }
     }else{
-      header('Location: index.php');
+        header('Location: index.php');
     }
  ?>
