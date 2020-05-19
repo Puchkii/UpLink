@@ -4,3 +4,8 @@ hr{
   margin-top: .3rem;
   margin-bottom: 1rem;
 }
+.vak{
+  position: relative;
+  margin: 1rem;
+  display: inline-block;
+}

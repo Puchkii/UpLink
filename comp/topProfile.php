@@ -8,12 +8,12 @@
                     </div>";
           }
           echo "<div class='col-sm-4'>
-                  <p>$bezoek</p>
+                  <h1>$bezoek</h1>
                 </div>
                 <div class='col-sm-4'>
-                  <p>$aboutBE</p>
+                  <h4>$aboutBE</h4>
                 </div>";
-          // echo "<h1 class='center col m-4 '>$bezoek</h1> <h2 class='m-4'>Followers : $followingAmmount</h2>";//oude versie 
+          // echo "<h1 class='center col m-4 '>$bezoek</h1> <h2 class='m-4'>Followers : $followingAmmount</h2>";//oude versie
           if($bezoek != $current && $current){ //zo dat je niet je zelf kan volgen
               if($following){
                   echo "<button type='submit' name='unfollow' class='btn btn-outline-secondary'>Unfollow</button>";

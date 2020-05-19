@@ -72,6 +72,8 @@
               $sql = "INSERT INTO `information` (`User`,`About`) VALUES ('$usernameForm','No user information');";
               if ($conn->query($sql) === true) {
                   $_SESSION['fout'] = true;
+                  $_SESSION['current'] = $usernameForm;
+                  $_SESSION['wachtwoordCheck'] = "false";
                   header('Location: index.php');//ga naar index
               }
           }

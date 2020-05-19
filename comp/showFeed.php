@@ -54,6 +54,6 @@
             echo "<h1 style='text-align: center;'>No post yet</h1>";
         }
     }else{
-        header('Location: index.php');
+        // header('Location: index.php');
     }
  ?>

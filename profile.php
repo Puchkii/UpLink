@@ -33,6 +33,7 @@
       include 'inc/follow.php';
     ?>
       <div class="container">
+        <br><br>
         <?php
           include 'comp\topProfile.php';
         ?>

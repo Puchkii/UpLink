@@ -25,7 +25,7 @@
       include 'inc/post.php';
       include 'comp/navbar.php';
     ?>
-    
+
     <h1 class="text-center m-5">Feed</h1>
     <div class="container">
       <?php include 'comp/showFeed.php'; ?>
