@@ -36,13 +36,13 @@
              $commentBE = unserialize($row['Comments']);
          }
       }
-      if($commentBE[$removeButton+1] == $current){//als de comment van de current is
+      if($commentBE[$removeButton+1] == $current | $current == $bezoek){//als de comment van de current is
         unset($commentBE[$removeButton]);
         unset($commentBE[$removeButton+1]);
 
         $compressedComment = serialize($commentBE);
 
-        $sql = "UPDATE `information` SET `Comments` = '$compressedJobs' WHERE User = '$bezoek';";
+        $sql = "UPDATE `information` SET `Comments` = '$compressedComment' WHERE User = '$bezoek';";
         if ($conn->query($sql) === true) {}
       }
       reloadPost();
