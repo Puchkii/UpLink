@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Selfmade-->
-    <!-- <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css"> -->
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/scroll.js"></script>
     <title>UpL!nk</title>
   </head>
@@ -22,12 +21,12 @@
       include 'inc/logout.php';
       include 'inc/bezoek.php';
       include 'comp/navbar.php';
-      include 'comp/footer.php';
       ?>
 
-      <form class="" method="post">
+      <form class='' method="post">
         <?php include 'comp/showSearch.php'; ?>
       </form>
+      <?php include 'comp/footer.php'; ?>
     <!-- Selfmade JS -->
     <script src="js/CookieNotifier.js"></script>
 

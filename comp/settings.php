@@ -9,9 +9,9 @@
 <br>
   <h3>Change password:</h3><br>
   <form class="row" method="post">
+    <input type="password" name="oudwachtwoord" class="rounded col" value="" placeholder="Old Password"><br><br>
     <input type="password" name="password1" class="rounded col" value="" placeholder="New Password"><br><br>
     <input type="password" name="password2" class="rounded col" value="" placeholder="Retype new Password"><br><br>
-    <input type="password" name="oudwachtwoord" class="rounded col" value="" placeholder="Old Password"><br><br>
     <input type="submit" name="ChangePassword" value="Change" class="btn btn-outline-secondary" onclick='getHeight()'>
   </form>
 
