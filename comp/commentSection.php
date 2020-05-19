@@ -8,9 +8,8 @@
     </form>
   <?php } ?>
 <hr><br>
-<div style="max-height: 500px; max-width: 700px; overflow: scroll;">
 <?php
-    if(!empty($followersProfileBE)){
+    if(!empty($commentBE)){
         for($i=0; $i < count($commentBE); $i+=2){
             $user = $commentBE[$i+1];
             echo "<div class='card' style='width: 18rem;'>
@@ -18,8 +17,8 @@
                       <h2 class='card-text'>$user</h2>
                       <p class='card-text'>$commentBE[$i]</p>
                       <form method='post' class=''>";
-            if($bezoek == $current){//als de comment van de ingelogte is
-                echo "<button type='submite' class='btn btn-secondary' value='$i' name='removeComment'><i class='far fa-trash-alt'></i></button>";
+            if($user == $current | $bezoek == $current){//als de comment van de ingelogte is
+                echo "<button type='submite' class='btn btn-secondary' value='$i' name='removeComment' onclick='getHeight()'><i class='far fa-trash-alt'></i></button>";
             }
             echo "    </form>
                     </div>
@@ -27,4 +26,3 @@
         }
     }
 ?>
-</div>
